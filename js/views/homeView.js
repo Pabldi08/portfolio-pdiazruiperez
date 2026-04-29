@@ -1,5 +1,9 @@
 import { getFeaturedProjects } from "../data/projects.js";
+import { contacts } from "../data/contacts.js";
+import { stackItems } from "../data/stack.js";
+import { contactLink } from "../components/contactLink.js";
 import { projectCard } from "../components/projectCard.js";
+import { stackCard } from "../components/stackCard.js";
 
 export function homeView() {
     const featured = getFeaturedProjects();
@@ -79,22 +83,7 @@ export function homeView() {
                 <h2 class="mb-10 text-4xl font-black tracking-tight">Tecnolog&iacute;as que estoy trabajando</h2>
 
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="rounded-2xl border border-white/10 bg-zinc-950/70 p-6">
-                        <h3 class="font-black text-emerald-300">Java</h3>
-                        <p class="mt-2 text-sm leading-6 text-zinc-400">POO, l&oacute;gica de negocio, estructuras y arquitectura.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-zinc-950/70 p-6">
-                        <h3 class="font-black text-cyan-300">Estructuras de Datos</h3>
-                        <p class="mt-2 text-sm leading-6 text-zinc-400">Profundizando en el uso de estructuras de datos complejas.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-zinc-950/70 p-6">
-                        <h3 class="font-black text-amber-200">SQL</h3>
-                        <p class="mt-2 text-sm leading-6 text-zinc-400">Consultas, relaciones y persistencia de datos.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-zinc-950/70 p-6">
-                        <h3 class="font-black text-rose-200">Git</h3>
-                        <p class="mt-2 text-sm leading-6 text-zinc-400">Control de versiones y organizaci&oacute;n de proyectos.</p>
-                    </div>
+                    ${stackItems.map(stackCard).join("")}
                 </div>
             </div>
         </section>
@@ -132,16 +121,21 @@ export function homeView() {
             </div>
         </section>
 
-        <section class="mx-auto max-w-6xl px-6 pb-24">
-            <div class="rounded-2xl border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-amber-300/10 p-10 text-center md:p-16">
-                <h2 class="text-4xl font-black tracking-tight">&iquest;Construimos algo?</h2>
-                <p class="mx-auto mt-4 max-w-2xl text-zinc-400">
-                    Puedes escribirme para hablar de proyectos, pr&aacute;cticas, ideas o colaboraci&oacute;n.
-                </p>
-                <a href="mailto:tuemail@gmail.com"
-                    class="mt-8 inline-flex rounded-full bg-emerald-400 px-8 py-3 font-black text-zinc-950 transition hover:-translate-y-1 hover:bg-emerald-300">
-                    Contactar
-                </a>
+        <section id="contacto" class="mx-auto max-w-[92rem] px-6 pb-24">
+            <div class="rounded-2xl border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-amber-300/10 p-8 md:p-12">
+                <div class="grid gap-10 lg:grid-cols-[0.58fr_1.42fr] lg:items-center">
+                    <div>
+                        <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Contacto</p>
+                        <h2 class="text-4xl font-black tracking-tight">&iquest;Construimos algo?</h2>
+                        <p class="mt-4 max-w-xl text-zinc-400">
+                            Puedes escribirme para hablar de proyectos, pr&aacute;cticas, ideas o colaboraci&oacute;n.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        ${contacts.map(contactLink).join("")}
+                    </div>
+                </div>
             </div>
         </section>
     `;

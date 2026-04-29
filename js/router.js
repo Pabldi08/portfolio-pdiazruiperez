@@ -14,7 +14,7 @@ export function renderRoute() {
         return;
     }
 
-    if (hash === "#stack" || hash === "#sobre-mi") {
+    if (hash === "#stack" || hash === "#sobre-mi" || hash === "#contacto") {
         app.innerHTML = homeView();
         requestAnimationFrame(() => {
             document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });

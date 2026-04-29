@@ -9,24 +9,37 @@
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-400 selection:text-zinc-950">
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-400 selection:text-zinc-950" data-theme="dark">
     <div class="site-background"></div>
     <div class="site-grid"></div>
 
     <nav class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/75 backdrop-blur-xl">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-5">
             <a href="#/" class="text-xl font-black tracking-tight text-emerald-400">
                 pdruiperez<span class="text-white">.com</span>
             </a>
 
-            <div class="hidden items-center gap-8 text-sm font-medium text-zinc-300 md:flex">
-                <a href="#/proyectos" class="transition hover:text-emerald-400">Proyectos</a>
-                <a href="#stack" class="transition hover:text-emerald-400">Stack</a>
-                <a href="#sobre-mi" class="transition hover:text-emerald-400">Sobre m&iacute;</a>
-                <a href="mailto:tuemail@gmail.com"
-                    class="rounded-full bg-emerald-400 px-5 py-2 font-bold text-zinc-950 transition hover:bg-emerald-300">
-                    Contacto
-                </a>
+            <div class="flex items-center gap-3 md:gap-8">
+                <div class="hidden items-center gap-8 text-sm font-medium text-zinc-300 md:flex">
+                    <a href="#/proyectos" class="transition hover:text-emerald-400">Proyectos</a>
+                    <a href="#stack" class="transition hover:text-emerald-400">Stack</a>
+                    <a href="#sobre-mi" class="transition hover:text-emerald-400">Sobre m&iacute;</a>
+                    <a href="#contacto"
+                        class="rounded-full bg-emerald-400 px-5 py-2 font-bold text-zinc-950 transition hover:bg-emerald-300">
+                        Contacto
+                    </a>
+                </div>
+
+                <button id="theme-toggle" type="button" aria-label="Cambiar a modo claro" aria-pressed="false"
+                    class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-300">
+                    <svg data-theme-icon="moon" aria-hidden="true" viewBox="0 0 24 24" class="theme-icon theme-icon-moon h-5 w-5 fill-none stroke-current stroke-2">
+                        <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg data-theme-icon="sun" aria-hidden="true" viewBox="0 0 24 24" class="theme-icon hidden h-5 w-5 fill-none stroke-current stroke-2">
+                        <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.36-6.36 1.42-1.42M4.22 19.78l1.42-1.42m0-12.72L4.22 4.22m15.56 15.56-1.42-1.42" stroke-linecap="round"></path>
+                        <circle cx="12" cy="12" r="4" stroke-linecap="round"></circle>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>

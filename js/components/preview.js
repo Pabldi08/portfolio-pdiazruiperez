@@ -34,6 +34,14 @@ export function getAccentClasses(accent) {
 }
 
 export function renderPreview(project) {
+    if (project.image?.src) {
+        return `
+            <div class="h-56 overflow-hidden border-b border-white/10 bg-zinc-950">
+                <img src="${project.image.src}" alt="${project.image.alt ?? project.title}" class="h-full w-full object-cover object-center">
+            </div>
+        `;
+    }
+
     if (project.preview === "terminal") {
         return `
             <div class="bg-black p-5 font-mono text-sm">

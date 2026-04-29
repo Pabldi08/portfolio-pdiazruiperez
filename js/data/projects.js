@@ -17,6 +17,7 @@ export const projects = [
         ],
         githubUrl: "https://github.com/Pabldi08/MarioBros-TP1",
         artifact: null,
+        image: null,
         preview: "terminal"
     },
     {
@@ -36,6 +37,7 @@ export const projects = [
         ],
         githubUrl: "https://github.com/Pabldi08/portfolio-pdiazruiperez",
         artifact: null,
+        image: null,
         preview: "web"
     },
     {
@@ -58,6 +60,7 @@ export const projects = [
             label: "Descargar EXE",
             url: "",
         },
+        image: null,
         preview: "backend"
     },
     {
@@ -77,6 +80,7 @@ export const projects = [
         ],
         githubUrl: "",
         artifact: null,
+        image: null,
         preview: "data"
     },
     {
@@ -99,6 +103,7 @@ export const projects = [
             label: "Descargar EXE",
             url: "",
         },
+        image: null,
         preview: "backend"
     }
 ];
