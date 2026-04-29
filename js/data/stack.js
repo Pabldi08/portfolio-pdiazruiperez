@@ -26,8 +26,8 @@ export const stackItems = [
         accent: "emerald",
         icon: "git",
         image: {
-    src: "assets/stack/java.png",
-    alt: "Java"
-}
+            src: "assets/stack/git.png",
+            alt: "Java"
+        }
     }
 ];
