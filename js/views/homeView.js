@@ -15,7 +15,7 @@ export function homeView() {
                 <h1 class="text-5xl font-black leading-tight tracking-tight md:text-7xl">
                     Desarrollo software con foco en
                     <span class="bg-gradient-to-r from-emerald-300 via-cyan-300 to-amber-200 bg-clip-text text-transparent">
-                        Java, datos y backend.
+                        Java, C++, datos y backend.
                     </span>
                 </h1>
 
