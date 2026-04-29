@@ -25,6 +25,9 @@ export const stackItems = [
         description: "Control de versiones y organizaci&oacute;n de proyectos.",
         accent: "emerald",
         icon: "git",
-        image: null
+        image: {
+    src: "assets/stack/java.png",
+    alt: "Java"
+}
     }
 ];

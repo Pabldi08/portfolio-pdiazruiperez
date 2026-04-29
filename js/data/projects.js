@@ -17,8 +17,7 @@ export const projects = [
         ],
         githubUrl: "https://github.com/Pabldi08/MarioBros-TP1",
         artifact: null,
-        image: null,
-        preview: "terminal"
+        preview: "terminal",
     },
     {
         slug: "portfolio-personal",
@@ -37,7 +36,6 @@ export const projects = [
         ],
         githubUrl: "https://github.com/Pabldi08/portfolio-pdiazruiperez",
         artifact: null,
-        image: null,
         preview: "web"
     },
     {
@@ -49,7 +47,7 @@ export const projects = [
         accent: "amber",
         tags: ["Java", "SQL", "MVC"],
         summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC. ",
-        description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales. Realizado en grupo",
+        description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales. ",
         highlights: [
             "Modelo de dominio separado de la persistencia.",
             "Capa DAO o repositorio para aislar acceso a datos.",
@@ -60,7 +58,6 @@ export const projects = [
             label: "Descargar EXE",
             url: "",
         },
-        image: null,
         preview: "backend"
     },
     {
@@ -80,17 +77,16 @@ export const projects = [
         ],
         githubUrl: "",
         artifact: null,
-        image: null,
         preview: "data"
     },
     {
         slug: "sistema-gestion-backend",
-        title: "FlickIt",
+        title: "Ecosistema",
         subtitle: "Arquitectura por capas y diseño backend",
         featured: false,
         status: "Terminado",
         accent: "",
-        tags: ["Java", "SQL", "MVC"],
+        tags: ["Java", "MVC", "POO"],
         summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC. ",
         description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales.",
         highlights: [
@@ -103,7 +99,6 @@ export const projects = [
             label: "Descargar EXE",
             url: "",
         },
-        image: null,
         preview: "backend"
     }
 ];
