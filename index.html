@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pdruiperez | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-400 selection:text-slate-950">
+
+    <!-- Fondo decorativo -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-3xl"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+            <a href="#" class="text-xl font-black tracking-tight text-emerald-400">
+                pdruiperez<span class="text-white">.dev</span>
+            </a>
+
+            <div class="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex">
+                <a href="#proyectos" class="transition hover:text-emerald-400">Proyectos</a>
+                <a href="#stack" class="transition hover:text-emerald-400">Stack</a>
+                <a href="#sobre-mi" class="transition hover:text-emerald-400">Sobre mí</a>
+                <a href="mailto:tuemail@gmail.com"
+                    class="rounded-full bg-emerald-400 px-5 py-2 font-bold text-slate-950 transition hover:bg-emerald-300">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-32">
+        <section>
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-300">
+                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                Portfolio personal en desarrollo
+            </div>
+
+            <h1 class="text-5xl font-black leading-tight tracking-tight md:text-7xl">
+                Desarrollo software con foco en
+                <span class="bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">
+                    Java, datos y backend.
+                </span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+                Soy Pablo, estudiante de Ingeniería Informática en crecimiento. Aquí documento proyectos, prácticas y experimentos:
+                desde juegos en consola hasta aplicaciones con arquitectura más seria.
+            </p>
+
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a href="#proyectos"
+                    class="rounded-full bg-emerald-400 px-7 py-3 text-center font-bold text-slate-950 shadow-lg shadow-emerald-400/20 transition hover:-translate-y-1 hover:bg-emerald-300">
+                    Ver proyectos
+                </a>
+                <a href="#sobre-mi"
+                    class="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-slate-200 transition hover:-translate-y-1 hover:border-emerald-400 hover:text-emerald-300">
+                    Sobre mí
+                </a>
+            </div>
+        </section>
+
+        <!-- Tarjeta visual tipo terminal -->
+        <section class="rounded-3xl border border-white/10 bg-white/[0.03] p-4 shadow-2xl shadow-black/40">
+            <div class="overflow-hidden rounded-2xl border border-white/10 bg-slate-950">
+                <div class="flex items-center gap-2 border-b border-white/10 bg-slate-900 px-4 py-3">
+                    <span class="h-3 w-3 rounded-full bg-red-500"></span>
+                    <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+                    <span class="h-3 w-3 rounded-full bg-green-500"></span>
+                    <span class="ml-3 text-xs text-slate-500">terminal</span>
+                </div>
+
+                <div class="space-y-4 p-6 font-mono text-sm">
+                    <p><span class="text-emerald-400">pablo@portfolio</span>:<span class="text-cyan-300">~</span>$ java Main</p>
+                    <p class="text-slate-400">Compilando proyecto...</p>
+                    <p class="text-slate-300">✓ POO aplicada</p>
+                    <p class="text-slate-300">✓ Lógica de negocio separada</p>
+                    <p class="text-slate-300">✓ Código limpio y mantenible</p>
+                    <p><span class="text-emerald-400">Output:</span> listo para seguir aprendiendo.</p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="mx-auto max-w-6xl px-6 py-20">
+            <div class="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+                <div>
+                    <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Proyectos</p>
+                    <h2 class="text-4xl font-black tracking-tight md:text-5xl">Cosas que he construido</h2>
+                </div>
+                <p class="max-w-md text-slate-400">
+                    Una selección de proyectos para demostrar lógica, estructura, aprendizaje y capacidad de resolver problemas.
+                </p>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2">
+                <!-- Proyecto 1 -->
+                <article class="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-xl transition hover:-translate-y-2 hover:border-emerald-400/50">
+                    <div class="bg-black p-5 font-mono text-sm">
+                        <div class="mb-5 flex gap-2">
+                            <span class="h-3 w-3 rounded-full bg-red-500"></span>
+                            <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+                            <span class="h-3 w-3 rounded-full bg-green-500"></span>
+                        </div>
+                        <p class="text-emerald-400">&gt; java -jar MarioGame.jar</p>
+                        <p class="mt-3 text-slate-400">Initializing world...</p>
+                        <p class="mt-3 text-white">[M] [?] [M] &nbsp; ᕕ( ᐛ )ᕗ</p>
+                        <p class="text-white">___|____|____|___</p>
+                    </div>
+
+                    <div class="p-7">
+                        <h3 class="text-2xl font-black text-white group-hover:text-emerald-300">Mario Console Edition</h3>
+                        <p class="mt-3 leading-7 text-slate-400">
+                            Clon funcional de Mario en Java puro, con gestión de colisiones, estados, físicas simples y renderizado por consola.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">Java</span>
+                            <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">POO</span>
+                            <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">Consola</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="group rounded-3xl border border-white/10 bg-slate-900/70 p-7 shadow-xl transition hover:-translate-y-2 hover:border-cyan-400/50">
+                    <div class="mb-8 flex h-48 items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03]">
+                        <p class="text-center text-slate-500">Próximo proyecto<br><span class="text-sm">en desarrollo</span></p>
+                    </div>
+                    <h3 class="text-2xl font-black text-white group-hover:text-cyan-300">Sistema de gestión / Backend</h3>
+                    <p class="mt-3 leading-7 text-slate-400">
+                        Espacio reservado para una aplicación con arquitectura por capas, base de datos, servicios y una arquitectura más completa.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">Java</span>
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">SQL</span>
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">MVC</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="group rounded-3xl border border-white/10 bg-slate-900/70 p-7 shadow-xl transition hover:-translate-y-2 hover:border-cyan-400/50">
+                    <div class="mb-8 flex h-48 items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03]">
+                        <p class="text-center text-slate-500">Próximo proyecto<br><span class="text-sm">en desarrollo</span></p>
+                    </div>
+                    <h3 class="text-2xl font-black text-white group-hover:text-cyan-300">Sistema de gestión / Backend</h3>
+                    <p class="mt-3 leading-7 text-slate-400">
+                        Espacio reservado para una aplicación con arquitectura por capas, base de datos, servicios y una interfaz más completa.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">Java</span>
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">SQL</span>
+                        <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">MVC</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack" class="border-y border-white/10 bg-white/[0.03]">
+            <div class="mx-auto max-w-6xl px-6 py-20">
+                <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Stack</p>
+                <h2 class="mb-10 text-4xl font-black tracking-tight">Tecnologías que estoy trabajando</h2>
+
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+                        <h3 class="font-black text-emerald-300">Java</h3>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">POO, lógica de negocio, estructuras y arquitectura.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+                        <h3 class="font-black text-emerald-300">Estructuras de Datos</h3>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Profundizando en el uso de estructuras de datos complejas</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+                        <h3 class="font-black text-emerald-300">SQL</h3>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Consultas, relaciones y persistencia de datos.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+                        <h3 class="font-black text-emerald-300">Git</h3>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Control de versiones y organización de proyectos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="sobre-mi" class="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
+            <div>
+                <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Sobre mí</p>
+                <h2 class="text-4xl font-black tracking-tight">Aprendo construyendo.</h2>
+            </div>
+
+            <div class="space-y-6 text-lg leading-8 text-slate-400">
+                <p>
+                    Me interesa especialmente entender cómo se estructura bien un programa: separar responsabilidades,
+                    escribir código legible y construir soluciones que no sean solo “que funcionen”, sino que puedan mantenerse.
+                </p>
+                <p>
+                    Este portfolio es también una forma de documentar mi evolución como desarrollador: proyectos pequeños,
+                    prácticas, ideas y mejoras constantes.
+                </p>
+
+                <div class="grid gap-4 pt-4 sm:grid-cols-3">
+                    <div class="rounded-2xl bg-emerald-400/10 p-5 text-center">
+                        <p class="text-3xl font-black text-emerald-300">Java</p>
+                        <p class="mt-1 text-sm text-slate-400">principal</p>
+                    </div>
+                    <div class="rounded-2xl bg-emerald-400/10 p-5 text-center">
+                        <p class="text-3xl font-black text-emerald-300">POO</p>
+                        <p class="mt-1 text-sm text-slate-400">enfoque</p>
+                    </div>
+                    <div class="rounded-2xl bg-emerald-400/10 p-5 text-center">
+                        <p class="text-3xl font-black text-emerald-300">Web</p>
+                        <p class="mt-1 text-sm text-slate-400">aprendiendo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="mx-auto max-w-6xl px-6 pb-24">
+            <div class="rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 p-10 text-center md:p-16">
+                <h2 class="text-4xl font-black tracking-tight">¿Construimos algo?</h2>
+                <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+                    Puedes escribirme para hablar de proyectos, prácticas, ideas o colaboración.
+                </p>
+                <a href="mailto:tuemail@gmail.com"
+                    class="mt-8 inline-flex rounded-full bg-emerald-400 px-8 py-3 font-black text-slate-950 transition hover:-translate-y-1 hover:bg-emerald-300">
+                    Contactar
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-slate-500">
+        © 2026 pdruiperez.dev — Hecho con HTML y Tailwind CSS
+    </footer>
+
+</body>
+
+</html>
