@@ -37,7 +37,7 @@ export function renderPreview(project) {
     if (project.image?.src) {
         return `
             <div class="h-56 overflow-hidden border-b border-white/10 bg-zinc-950">
-                <img src="${project.image.src}" alt="${project.image.alt ?? project.title}" class="h-full w-full object-cover object-center">
+                <img src="${assetSrc(project.image.src)}" alt="${project.image.alt ?? project.title}" class="h-full w-full object-cover object-center">
             </div>
         `;
     }
@@ -81,4 +81,12 @@ export function tagList(project) {
     return project.tags.map(tag => `
         <span class="rounded-full ${classes.bg} px-3 py-1 text-xs font-bold ${classes.text}">${tag}</span>
     `).join("");
+}
+
+function assetSrc(src) {
+    if (src.startsWith("/") || src.startsWith("http") || src.startsWith("data:")) {
+        return src;
+    }
+
+    return `/${src}`;
 }

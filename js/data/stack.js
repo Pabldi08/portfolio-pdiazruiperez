@@ -27,7 +27,7 @@ export const stackItems = [
         icon: "git",
         image: {
             src: "assets/stack/git.png",
-            alt: "Java"
+            alt: "git"
         }
     }
 ];

@@ -1,7 +1,14 @@
-import { renderRoute, setProjectFilter } from "./router.js";
+import { navigateTo, renderRoute, setProjectFilter } from "./router.js";
 import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js";
 
 document.addEventListener("click", (event) => {
+    const internalLink = event.target.closest("a[href^='/']");
+    if (internalLink && internalLink.origin === window.location.origin) {
+        event.preventDefault();
+        navigateTo(internalLink.pathname);
+        return;
+    }
+
     const filterButton = event.target.closest("[data-filter]");
     if (filterButton) {
         setProjectFilter(filterButton.dataset.filter);
@@ -37,5 +44,5 @@ document.addEventListener("submit", (event) => {
     }
 });
 
-window.addEventListener("hashchange", renderRoute);
+window.addEventListener("popstate", renderRoute);
 renderRoute();

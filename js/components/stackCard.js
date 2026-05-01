@@ -22,8 +22,16 @@ export function stackCard(item) {
 
 function stackMedia(item) {
     if (item.image?.src) {
-        return `<img src="${item.image.src}" alt="${item.image.alt ?? item.title}" class="h-10 w-10 object-contain">`;
+        return `<img src="${assetSrc(item.image.src)}" alt="${item.image.alt ?? item.title}" class="h-10 w-10 object-contain">`;
     }
 
     return icons[item.icon]?.() ?? "";
+}
+
+function assetSrc(src) {
+    if (src.startsWith("/") || src.startsWith("http") || src.startsWith("data:")) {
+        return src;
+    }
+
+    return `/${src}`;
 }

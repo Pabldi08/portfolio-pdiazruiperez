@@ -4,7 +4,7 @@ export function projectCard(project) {
     const classes = getAccentClasses(project.accent);
 
     return `
-        <a href="#/proyectos/${project.slug}"
+        <a href="/proyectos/${project.slug}"
             class="group overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/75 shadow-xl shadow-black/20 transition hover:-translate-y-2 ${classes.border}">
             ${renderPreview(project)}
             <div class="p-7">

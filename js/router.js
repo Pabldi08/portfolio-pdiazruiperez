@@ -6,30 +6,30 @@ let activeProjectFilter = "Todos";
 
 export function renderRoute() {
     const app = document.querySelector("#app");
-    const hash = window.location.hash || "#/";
+    const path = normalizePath(window.location.pathname);
 
-    if (hash === "#/" || hash === "#") {
+    if (path === "/") {
         app.innerHTML = homeView();
         window.scrollTo(0, 0);
         return;
     }
 
-    if (hash === "#stack" || hash === "#sobre-mi" || hash === "#contacto") {
+    if (path === "/stack" || path === "/sobre-mi" || path === "/contacto") {
         app.innerHTML = homeView();
         requestAnimationFrame(() => {
-            document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+            document.querySelector(`#${path.slice(1)}`)?.scrollIntoView({ behavior: "smooth" });
         });
         return;
     }
 
-    if (hash === "#/proyectos") {
+    if (path === "/proyectos") {
         app.innerHTML = projectsView(activeProjectFilter);
         window.scrollTo(0, 0);
         return;
     }
 
-    if (hash.startsWith("#/proyectos/")) {
-        app.innerHTML = projectDetailView(hash.replace("#/proyectos/", ""));
+    if (path.startsWith("/proyectos/")) {
+        app.innerHTML = projectDetailView(path.replace("/proyectos/", ""));
         window.scrollTo(0, 0);
         return;
     }
@@ -37,8 +37,28 @@ export function renderRoute() {
     app.innerHTML = homeView();
 }
 
+export function navigateTo(path) {
+    const nextPath = normalizePath(path);
+
+    if (nextPath === normalizePath(window.location.pathname)) {
+        renderRoute();
+        return;
+    }
+
+    window.history.pushState({}, "", nextPath);
+    renderRoute();
+}
+
 export function setProjectFilter(filter) {
     activeProjectFilter = filter;
-    window.location.hash = "#/proyectos";
-    renderRoute();
+    navigateTo("/proyectos");
+}
+
+function normalizePath(path) {
+    if (!path || path === "/index.html") {
+        return "/";
+    }
+
+    const cleanPath = path.replace(/\/+$/, "");
+    return cleanPath || "/";
 }
