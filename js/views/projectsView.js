@@ -13,7 +13,7 @@ export function projectsView(activeFilter) {
                 <h1 class="text-5xl font-black tracking-tight md:text-7xl">El taller completo.</h1>
                 <p class="mt-5 text-lg leading-8 text-zinc-400">
                     Aqu&iacute; aparecen tanto los proyectos terminados como los que siguen creciendo. Cada tarjeta abre una vista con m&aacute;s detalle,
-                    enlace a GitHub y descarga de .jar/.exe cuando est&eacute; disponible.
+                    enlace a GitHub, demo interactiva o ejecutable cuando exista.
                 </p>
             </div>
 

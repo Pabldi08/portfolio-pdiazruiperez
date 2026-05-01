@@ -1,4 +1,8 @@
 // Cambia featured a true en los dos proyectos que quieras ensenar en la pagina principal.
+// Si quieres una captura en la tarjeta/detalle principal, usa:
+// image: { src: "assets/projects/mario/mario-cover.png", alt: "Mario por Consola" }
+// Si quieres una captura solo para la demo del comando /view, usa:
+// console.preview.image: { src: "assets/projects/mario/mario-demo.png", alt: "Demo de Mario" }
 export const projects = [
     {
         slug: "mario-console-edition",
@@ -18,6 +22,58 @@ export const projects = [
         githubUrl: "https://github.com/Pabldi08/MarioBros-TP1",
         artifact: null,
         preview: "terminal",
+        image: {
+            src: "assets/projects/mario/mario-cover.png",
+            alt: "Placeholder de Mario por Consola"
+        },
+        console: {
+            ctaLabel: "Abrir consola virtual",
+            title: "Mario Console Runtime",
+            prompt: "pablo@mario:~$",
+            initialLines: [
+                "Entorno virtual preparado.",
+                "Escribe /help para ver los comandos disponibles."
+            ],
+            unknownCommand: [
+                "Comando no reconocido.",
+                "Prueba con /help para ver las opciones preparadas."
+            ],
+            preview: {
+                title: "Demo placeholder",
+                description: "Sustituye este bloque por una imagen, GIF o captura real del proyecto cuando quieras ense&ntilde;arlo.",
+                image: {
+                    src: "assets/projects/mario/mario-cover.png",
+                    alt: "Placeholder de la demo de Mario"
+                }
+            },
+            commands: {
+                "/help": {
+                    lines: [
+                        "Comandos preparados:",
+                        "/help  -> muestra la ayuda de la consola.",
+                        "/view  -> abre la demo visual del proyecto.",
+                        "/clear -> limpia el historial de salida."
+                    ]
+                },
+                "/view": {
+                    lines: [
+                        "MarioBross 3.0  |  Time: 100  Points: 0  Lives: 3",
+                        "",
+                        "    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4",
+                        "  +-------------------------------+",
+                        "0 |                     B         |",
+                        "1 |                               |",
+                        "2 |      ####               ####  |",
+                        "3 |                    #########  |",
+                        "4 |M   ####  ####      ######### D|",
+                        "5 |###############################|",
+                        "  +-------------------------------+",
+                        ""
+                    ],
+                    revealPreview: true
+                }
+            }
+        }
     },
     {
         slug: "portfolio-personal",
@@ -77,7 +133,7 @@ export const projects = [
         ],
         githubUrl: "",
         artifact: null,
-        preview: "data"
+        preview: "backend"
     },
     {
         slug: "sistema-gestion-backend",

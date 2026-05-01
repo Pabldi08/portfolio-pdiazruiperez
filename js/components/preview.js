@@ -42,34 +42,34 @@ export function renderPreview(project) {
         `;
     }
 
-    if (project.preview === "terminal") {
-        return `
-            <div class="bg-black p-5 font-mono text-sm">
-                <div class="mb-5 flex gap-2">
-                    <span class="h-3 w-3 rounded-full bg-red-500"></span>
-                    <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
-                    <span class="h-3 w-3 rounded-full bg-green-500"></span>
-                </div>
-                <p class="text-emerald-400">&gt; java -jar MarioGame.jar</p>
-                <p class="mt-3 text-zinc-400">Initializing world...</p>
-                <p class="mt-3 text-white">[M] [?] [M] &nbsp; ᕦ( ᐛ )ᕤ</p>
-                <p class="text-white">___|____|____|___</p>
-            </div>
-        `;
-    }
-
     const classes = getAccentClasses(project.accent);
 
     return `
-        <div class="flex h-48 items-center justify-center border-b border-white/10 ${classes.bg}">
-            <div class="grid h-28 w-44 grid-cols-3 gap-2">
-                <span class="rounded bg-white/15"></span>
-                <span class="rounded bg-white/25"></span>
-                <span class="rounded bg-white/10"></span>
-                <span class="col-span-2 rounded bg-white/10"></span>
-                <span class="rounded bg-white/25"></span>
-                <span class="rounded bg-white/20"></span>
-                <span class="col-span-2 rounded bg-white/10"></span>
+        <div class="border-b border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-5">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div class="flex items-center justify-between gap-3">
+                    <span class="rounded-full ${classes.bg} px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] ${classes.text}">
+                        Vista previa
+                    </span>
+                    <span class="text-xs font-semibold text-zinc-500">Sustituible por demo real</span>
+                </div>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+                    <div>
+                        <p class="text-lg font-black text-white">${project.title}</p>
+                        <p class="mt-2 max-w-md text-sm leading-6 text-zinc-400">
+                            Usa este bloque como placeholder comun para todos los proyectos o reemplazalo por una captura cuando tengas una demo visual.
+                        </p>
+                    </div>
+
+                    <div class="grid h-24 grid-cols-3 gap-2">
+                        <span class="rounded-xl bg-white/10"></span>
+                        <span class="rounded-xl bg-white/20"></span>
+                        <span class="rounded-xl bg-white/10"></span>
+                        <span class="col-span-2 rounded-xl bg-white/10"></span>
+                        <span class="rounded-xl ${classes.bg}"></span>
+                    </div>
+                </div>
             </div>
         </div>
     `;

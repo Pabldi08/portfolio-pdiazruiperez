@@ -1,6 +1,7 @@
 import { getProjectBySlug } from "../data/projects.js";
-import { iconDownload, iconGitHub } from "../components/icons.js";
+import { iconDownload, iconGitHub, iconTerminal } from "../components/icons.js";
 import { getAccentClasses, renderPreview, tagList } from "../components/preview.js";
+import { renderVirtualConsole } from "../components/virtualConsole.js";
 
 export function projectDetailView(slug) {
     const project = getProjectBySlug(slug);
@@ -50,6 +51,8 @@ export function projectDetailView(slug) {
                     </div>
                 </aside>
             </div>
+
+            ${renderVirtualConsole(project)}
         </section>
     `;
 }
@@ -72,10 +75,19 @@ function githubButton(project) {
 }
 
 function artifactButton(project, classes) {
+    if (project.console) {
+        return `
+            <button type="button" data-open-console="${project.slug}"
+                class="inline-flex items-center justify-center gap-3 rounded-full ${classes.button} px-6 py-3 font-black transition hover:-translate-y-1">
+                ${iconTerminal()} ${project.console.ctaLabel ?? "Abrir consola"}
+            </button>
+        `;
+    }
+
     if (!project.artifact?.url) {
         return `
             <span class="inline-flex cursor-not-allowed items-center justify-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 font-black text-zinc-500">
-                ${iconDownload()} Ejecutable pendiente
+                ${iconDownload()} Demo o ejecutable pendiente
             </span>
         `;
     }
