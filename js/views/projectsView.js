@@ -7,7 +7,7 @@ export function projectsView(activeFilter) {
 
     return `
         <section class="mx-auto max-w-6xl px-6 py-20">
-            <a href="#/" class="mb-8 inline-flex text-sm font-bold text-zinc-400 transition hover:text-emerald-300">&larr; Volver al inicio</a>
+            <a href="/" class="mb-8 inline-flex text-sm font-bold text-zinc-400 transition hover:text-emerald-300">&larr; Volver al inicio</a>
             <div class="mb-10 max-w-3xl">
                 <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Todos los proyectos</p>
                 <h1 class="text-5xl font-black tracking-tight md:text-7xl">El taller completo.</h1>

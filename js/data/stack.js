@@ -10,7 +10,7 @@ export const stackItems = [
         title: "Estructuras de Datos",
         description: "Profundizando en el uso de estructuras de datos complejas.",
         accent: "emerald",
-        icon: "database",
+        icon: "list",
         image: null
     },
     {
@@ -25,9 +25,6 @@ export const stackItems = [
         description: "Control de versiones y organizaci&oacute;n de proyectos.",
         accent: "emerald",
         icon: "git",
-        image: {
-            src: "assets/stack/git.png",
-            alt: "Java"
-        }
+        image: null
     }
 ];

@@ -5,7 +5,7 @@
 // console.preview.image: { src: "assets/projects/mario/mario-demo.png", alt: "Demo de Mario" }
 export const projects = [
     {
-        slug: "mario-console-edition",
+        slug: "mario-consola",
         title: "Mario por Consola",
         subtitle: "Juego en consola con l&oacute;gica de plataformas",
         featured: true,
@@ -24,7 +24,7 @@ export const projects = [
         preview: "terminal",
         image: {
             src: "assets/projects/mario/mario-cover.png",
-            alt: "Placeholder de Mario por Consola"
+            alt: "Captura pixel-art de Mario por Consola"
         },
         console: {
             ctaLabel: "Abrir consola virtual",
@@ -43,7 +43,7 @@ export const projects = [
                 description: "Sustituye este bloque por una imagen, GIF o captura real del proyecto cuando quieras ense&ntilde;arlo.",
                 image: {
                     src: "assets/projects/mario/mario-cover.png",
-                    alt: "Placeholder de la demo de Mario"
+                    alt: "Demo visual pixel-art de Mario por Consola"
                 }
             },
             commands: {
@@ -76,10 +76,10 @@ export const projects = [
         }
     },
     {
-        slug: "portfolio-personal",
+        slug: "portfolio",
         title: "Portfolio personal",
         subtitle: "Web est&aacute;tica para presentar proyectos",
-        featured: true,
+        featured: false,
         status: "En evoluci&oacute;n",
         accent: "cyan",
         tags: ["HTML", "Tailwind", "JavaScript"],
@@ -95,7 +95,7 @@ export const projects = [
         preview: "web"
     },
     {
-        slug: "sistema-gestion-backend",
+        slug: "flickit",
         title: "FlickIt",
         subtitle: "Arquitectura por capas y diseño backend",
         featured: false,
@@ -117,7 +117,7 @@ export const projects = [
         preview: "backend"
     },
     {
-        slug: "practicas-estructuras-datos",
+        slug: "estructuras-de-datos",
         title: "Pr&aacute;cticas de estructuras de datos",
         subtitle: "Ejercicios y algoritmos en Java/C++",
         featured: false,
@@ -136,10 +136,10 @@ export const projects = [
         preview: "backend"
     },
     {
-        slug: "sistema-gestion-backend",
+        slug: "ecosistema",
         title: "Ecosistema",
         subtitle: "Arquitectura por capas y diseño backend",
-        featured: false,
+        featured: true,
         status: "Terminado",
         accent: "",
         tags: ["Java", "MVC", "POO"],

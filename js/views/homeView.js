@@ -29,11 +29,11 @@ export function homeView() {
                 </p>
 
                 <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-                    <a href="#/proyectos"
+                    <a href="/proyectos"
                         class="rounded-full bg-emerald-400 px-7 py-3 text-center font-bold text-zinc-950 shadow-lg shadow-emerald-400/20 transition hover:-translate-y-1 hover:bg-emerald-300">
                         Ver todos los proyectos
                     </a>
-                    <a href="#sobre-mi"
+                    <a href="/sobre-mi"
                         class="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-zinc-200 transition hover:-translate-y-1 hover:border-emerald-400 hover:text-emerald-300">
                         Sobre m&iacute;
                     </a>
@@ -67,7 +67,7 @@ export function homeView() {
                     <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Proyectos destacados</p>
                     <h2 class="text-4xl font-black tracking-tight md:text-5xl">Dos cosas que quiero ense&ntilde;ar primero</h2>
                 </div>
-                <a href="#/proyectos" class="text-sm font-bold text-cyan-300 transition hover:text-cyan-200">
+                <a href="/proyectos" class="text-sm font-bold text-cyan-300 transition hover:text-cyan-200">
                     Ver listado completo
                 </a>
             </div>
@@ -80,7 +80,7 @@ export function homeView() {
         <section id="stack" class="border-y border-white/10 bg-white/[0.03]">
             <div class="mx-auto max-w-6xl px-6 py-20">
                 <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Stack</p>
-                <h2 class="mb-10 text-4xl font-black tracking-tight">Tecnolog&iacute;as que estoy trabajando</h2>
+                <h2 class="mb-10 text-4xl font-black tracking-tight">Stack que estoy trabajando</h2>
 
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     ${stackItems.map(stackCard).join("")}
