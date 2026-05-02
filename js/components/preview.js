@@ -57,7 +57,7 @@ export function renderPreview(project) {
                 <div class="mt-5 grid gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-end">
                     <div>
                         <p class="text-lg font-black text-white">${project.title}</p>
-                        <p class="mt-2 max-w-md text-sm leading-6 text-zinc-400">
+                        <p class="text-description mt-2 max-w-md text-sm leading-6 text-zinc-400">
                             Usa este bloque como placeholder comun para todos los proyectos o reemplazalo por una captura cuando tengas una demo visual.
                         </p>
                     </div>

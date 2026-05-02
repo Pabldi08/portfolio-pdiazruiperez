@@ -17,7 +17,7 @@ export function renderVirtualConsole(project) {
                     <div>
                         <p class="text-xs font-bold uppercase tracking-[0.3em] ${classes.text}">Consola virtual</p>
                         <h2 class="mt-2 text-2xl font-black text-white">${project.console.title ?? project.title}</h2>
-                        <p class="mt-2 max-w-2xl text-sm leading-6 text-zinc-400">
+                        <p class="text-description mt-2 max-w-2xl text-sm leading-6 text-zinc-400">
                             Entorno interactivo preparado para demos de proyectos de terminal. Puedes ampliar los comandos cuando quieras desde los datos del proyecto.
                         </p>
                     </div>
@@ -162,7 +162,7 @@ function renderConsolePreview(project) {
             <p class="text-xs font-bold uppercase tracking-[0.24em] text-zinc-500">Vista /view</p>
             <div class="mt-4 rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-transparent p-6">
                 <p class="text-lg font-black text-white">${project.console?.preview?.title ?? "Demo visual"}</p>
-                <p class="mt-3 text-sm leading-6 text-zinc-400">
+                <p class="text-description mt-3 text-sm leading-6 text-zinc-400">
                     ${project.console?.preview?.description ?? "Este bloque puede sustituirse por una captura o animacion real del proyecto."}
                 </p>
                 <div class="mt-5 grid grid-cols-6 gap-2">

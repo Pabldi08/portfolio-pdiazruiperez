@@ -21,7 +21,7 @@ export function projectDetailView(slug) {
                     <span class="rounded-full border ${classes.ring} px-3 py-1 text-xs font-bold ${classes.text}">${project.status}</span>
                     <h1 class="mt-6 text-5xl font-black tracking-tight md:text-7xl">${project.title}</h1>
                     <p class="mt-4 text-xl font-semibold text-zinc-500">${project.subtitle}</p>
-                    <p class="mt-8 text-lg leading-8 text-zinc-300">${project.description}</p>
+                    <p class="text-description mt-8 text-lg leading-8 text-zinc-300">${project.description}</p>
 
                     <div class="mt-8 flex flex-wrap gap-2">${tagList(project)}</div>
 
@@ -40,7 +40,7 @@ export function projectDetailView(slug) {
 
                     <div class="mt-8">
                         <h2 class="text-2xl font-black">Qu&eacute; demuestra</h2>
-                        <ul class="mt-5 space-y-4 text-zinc-400">
+                        <ul class="text-description mt-5 space-y-4 text-zinc-400">
                             ${project.highlights.map(item => `
                                 <li class="flex gap-3">
                                     <span class="mt-2 h-2 w-2 shrink-0 rounded-full ${classes.bg}"></span>
@@ -105,7 +105,7 @@ function notFoundView() {
         <section class="mx-auto max-w-3xl px-6 py-24">
             <a href="/proyectos" class="mb-8 inline-flex text-sm font-bold text-zinc-400 transition hover:text-emerald-300">&larr; Volver a proyectos</a>
             <h1 class="text-5xl font-black">Proyecto no encontrado</h1>
-            <p class="mt-5 text-zinc-400">La vista que buscas no existe o el proyecto ha cambiado de identificador.</p>
+            <p class="text-description mt-5 text-zinc-400">La vista que buscas no existe o el proyecto ha cambiado de identificador.</p>
         </section>
     `;
 }

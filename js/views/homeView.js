@@ -23,7 +23,7 @@ export function homeView() {
                     </span>
                 </h1>
 
-                <p class="mt-6 max-w-xl text-lg leading-8 text-zinc-400">
+                <p class="text-description mt-6 max-w-xl text-lg leading-8 text-zinc-400">
                     Soy Pablo, estudiante de Ingenier&iacute;a Inform&aacute;tica en crecimiento. Aqu&iacute; documento proyectos, pr&aacute;cticas y experimentos:
                     desde juegos en consola hasta aplicaciones con arquitectura m&aacute;s seria.
                 </p>
@@ -94,7 +94,7 @@ export function homeView() {
                 <h2 class="text-4xl font-black tracking-tight">Aprendo construyendo.</h2>
             </div>
 
-            <div class="space-y-6 text-lg leading-8 text-zinc-400">
+            <div class="text-description space-y-6 text-lg leading-8 text-zinc-400">
                 <p>
                     Me interesa especialmente entender c&oacute;mo se estructura bien un programa: separar responsabilidades,
                     escribir c&oacute;digo legible y construir soluciones que no sean solo &ldquo;que funcionen&rdquo;, sino que puedan mantenerse.
@@ -127,7 +127,7 @@ export function homeView() {
                     <div>
                         <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Contacto</p>
                         <h2 class="text-4xl font-black tracking-tight">&iquest;Construimos algo?</h2>
-                        <p class="mt-4 max-w-xl text-zinc-400">
+                        <p class="text-description mt-4 max-w-xl text-zinc-400">
                             Puedes escribirme para hablar de proyectos, pr&aacute;cticas, ideas o colaboraci&oacute;n.
                         </p>
                     </div>
