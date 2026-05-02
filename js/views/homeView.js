@@ -80,7 +80,7 @@ export function homeView() {
         <section id="stack" class="border-y border-white/10 bg-white/[0.03]">
             <div class="mx-auto max-w-6xl px-6 py-20">
                 <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Stack</p>
-                <h2 class="mb-10 text-4xl font-black tracking-tight">Tecnolog&iacute;as que estoy trabajando</h2>
+                <h2 class="mb-10 text-4xl font-black tracking-tight">Stack que estoy trabajando</h2>
 
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     ${stackItems.map(stackCard).join("")}

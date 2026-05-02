@@ -1,9 +1,10 @@
-import { iconCode, iconDatabase, iconGitBranch } from "./icons.js";
+import { iconCode, iconDatabase, iconGitBranch, iconList } from "./icons.js";
 
 const icons = {
     code: iconCode,
     database: iconDatabase,
-    git: iconGitBranch
+    git: iconGitBranch,
+    list: iconList
 };
 
 export function stackCard(item) {

@@ -14,10 +14,16 @@ export function renderRoute() {
         return;
     }
 
-    if (path === "/stack" || path === "/sobre-mi" || path === "/contacto") {
+    const sectionRoutes = {
+        "/stack": "stack",
+        "/sobre-mi": "sobre-mi",
+        "/contacto": "contacto"
+    };
+
+    if (sectionRoutes[path]) {
         app.innerHTML = homeView();
         requestAnimationFrame(() => {
-            document.querySelector(`#${path.slice(1)}`)?.scrollIntoView({ behavior: "smooth" });
+            document.querySelector(`#${sectionRoutes[path]}`)?.scrollIntoView({ behavior: "smooth" });
         });
         return;
     }
