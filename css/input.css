@@ -38,10 +38,6 @@
     background-size: 48px 48px;
 }
 
-.contact-label {
-    overflow-wrap: anywhere;
-}
-
 .text-description {
     font-family: "Onest", ui-sans-serif, system-ui, sans-serif;
 }

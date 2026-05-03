@@ -1,6 +1,4 @@
 // Cambia featured a true en los dos proyectos que quieras ensenar en la pagina principal.
-// Si quieres una captura en la tarjeta/detalle principal, usa:
-// image: { src: "assets/projects/mario/mario-cover.png", alt: "Mario por Consola" }
 // Si quieres una captura solo para la demo del comando /view, usa:
 // console.preview.image: { src: "assets/projects/mario/mario-demo.png", alt: "Demo de Mario" }
 export const projects = [
@@ -22,10 +20,6 @@ export const projects = [
         githubUrl: "https://github.com/Pabldi08/MarioBros-TP1",
         artifact: null,
         preview: "terminal",
-        image: {
-            src: "assets/projects/mario/mario-cover.png",
-            alt: "Captura pixel-art de Mario por Consola"
-        },
         console: {
             ctaLabel: "Abrir consola virtual",
             title: "Mario Console Runtime",
@@ -40,11 +34,7 @@ export const projects = [
             ],
             preview: {
                 title: "Demo placeholder",
-                description: "Sustituye este bloque por una imagen, GIF o captura real del proyecto cuando quieras ense&ntilde;arlo.",
-                image: {
-                    src: "assets/projects/mario/mario-cover.png",
-                    alt: "Demo visual pixel-art de Mario por Consola"
-                }
+                description: "Sustituye este bloque por una imagen, GIF o captura real del proyecto cuando quieras ense&ntilde;arlo."
             },
             commands: {
                 "/help": {

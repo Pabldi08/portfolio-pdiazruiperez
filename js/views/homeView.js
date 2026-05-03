@@ -1,9 +1,11 @@
-import { getFeaturedProjects } from "../data/projects.js";
-import { contacts } from "../data/contacts.js";
-import { stackItems } from "../data/stack.js";
-import { contactLink } from "../components/contactLink.js";
-import { projectCard } from "../components/projectCard.js";
-import { stackCard } from "../components/stackCard.js";
+import { getFeaturedProjects } from "../data/projects.js?v=839e0ab6d1";
+import { contacts } from "../data/contacts.js?v=839e0ab6d1";
+import { resumeItems } from "../data/resume.js?v=839e0ab6d1";
+import { stackItems } from "../data/stack.js?v=839e0ab6d1";
+import { contactLink } from "../components/contactLink.js?v=839e0ab6d1";
+import { iconBriefcase } from "../components/icons.js?v=839e0ab6d1";
+import { projectCard } from "../components/projectCard.js?v=839e0ab6d1";
+import { stackCard } from "../components/stackCard.js?v=839e0ab6d1";
 
 export function homeView() {
     const featured = getFeaturedProjects();
@@ -33,9 +35,9 @@ export function homeView() {
                         class="rounded-full bg-emerald-400 px-7 py-3 text-center font-bold text-zinc-950 shadow-lg shadow-emerald-400/20 transition hover:-translate-y-1 hover:bg-emerald-300">
                         Ver todos los proyectos
                     </a>
-                    <a href="/sobre-mi"
+                    <a href="/cv"
                         class="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-zinc-200 transition hover:-translate-y-1 hover:border-emerald-400 hover:text-emerald-300">
-                        Sobre m&iacute;
+                        Ver CV
                     </a>
                 </div>
             </section>
@@ -60,6 +62,25 @@ export function homeView() {
                 </div>
             </section>
         </header>
+
+        <section id="cv" class="mx-auto max-w-6xl px-6 py-20">
+            <div class="mb-12 flex items-center gap-4">
+                <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-zinc-100">
+                    ${iconBriefcase()}
+                </span>
+                <div>
+                    <p class="mb-1 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Curr&iacute;culum</p>
+                    <h2 class="text-4xl font-black tracking-tight md:text-5xl">CV y experiencia pr&aacute;ctica</h2>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute bottom-8 left-3 top-3 w-px bg-white/15 md:left-4"></div>
+                <div class="space-y-14">
+                    ${resumeItems.map(resumeItem).join("")}
+                </div>
+            </div>
+        </section>
 
         <section id="proyectos-destacados" class="mx-auto max-w-6xl px-6 py-20">
             <div class="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
@@ -88,55 +109,52 @@ export function homeView() {
             </div>
         </section>
 
-        <section id="sobre-mi" class="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
+        <section id="contacto" class="mx-auto max-w-6xl px-6 py-20">
+            <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                <div>
+                    <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Contacto</p>
+                    <h2 class="text-4xl font-black tracking-tight">&iquest;Construimos algo?</h2>
+                </div>
+
+                <div class="flex flex-wrap gap-4">
+                    ${contacts.map(contactLink).join("")}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function resumeItem(item) {
+    return `
+        <article class="relative grid gap-5 pl-12 md:grid-cols-[0.9fr_1.5fr] md:gap-12 md:pl-16">
+            <span class="absolute left-0 top-2 z-10 h-7 w-7 rounded-full border-4 border-zinc-950 bg-emerald-400 shadow-lg shadow-emerald-400/25 md:left-1"></span>
+
             <div>
-                <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Sobre m&iacute;</p>
-                <h2 class="text-4xl font-black tracking-tight">Aprendo construyendo.</h2>
+                <h3 class="text-2xl font-black leading-tight text-emerald-300">${item.title}</h3>
+                <p class="mt-2 text-xl font-black text-white">${item.organization}</p>
+                <p class="mt-2 text-sm font-bold text-zinc-500">${item.period}</p>
             </div>
 
-            <div class="text-description space-y-6 text-lg leading-8 text-zinc-400">
-                <p>
-                    Me interesa especialmente entender c&oacute;mo se estructura bien un programa: separar responsabilidades,
-                    escribir c&oacute;digo legible y construir soluciones que no sean solo &ldquo;que funcionen&rdquo;, sino que puedan mantenerse.
-                </p>
-                <p>
-                    Este portfolio es tambi&eacute;n una forma de documentar mi evoluci&oacute;n como desarrollador: proyectos peque&ntilde;os,
-                    pr&aacute;cticas, ideas y mejoras constantes.
-                </p>
-
-                <div class="grid gap-4 pt-4 sm:grid-cols-3">
-                    <div class="rounded-2xl bg-emerald-400/10 p-5 text-center">
-                        <p class="text-3xl font-black text-emerald-300">Java/C++</p>
-                        <p class="mt-1 text-sm text-zinc-400">principal</p>
-                    </div>
-                    <div class="rounded-2xl bg-cyan-400/10 p-5 text-center">
-                        <p class="text-3xl font-black text-cyan-300">POO</p>
-                        <p class="mt-1 text-sm text-zinc-400">inter&eacute;s</p>
-                    </div>
-                    <div class="rounded-2xl bg-amber-300/10 p-5 text-center">
-                        <p class="text-3xl font-black text-amber-200">Web</p>
-                        <p class="mt-1 text-sm text-zinc-400">aprendiendo</p>
-                    </div>
-                </div>
+            <div>
+                <p class="text-description max-w-2xl text-lg leading-8 text-zinc-300">${item.description}</p>
+                ${resumeLink(item)}
             </div>
-        </section>
+        </article>
+    `;
+}
 
-        <section id="contacto" class="mx-auto max-w-[92rem] px-6 pb-24">
-            <div class="rounded-2xl border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-amber-300/10 p-8 md:p-12">
-                <div class="grid gap-10 lg:grid-cols-[0.58fr_1.42fr] lg:items-center">
-                    <div>
-                        <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Contacto</p>
-                        <h2 class="text-4xl font-black tracking-tight">&iquest;Construimos algo?</h2>
-                        <p class="text-description mt-4 max-w-xl text-zinc-400">
-                            Puedes escribirme para hablar de proyectos, pr&aacute;cticas, ideas o colaboraci&oacute;n.
-                        </p>
-                    </div>
+function resumeLink(item) {
+    if (!item.link) {
+        return "";
+    }
 
-                    <div class="grid gap-5 sm:grid-cols-2">
-                        ${contacts.map(contactLink).join("")}
-                    </div>
-                </div>
-            </div>
-        </section>
+    const isExternal = item.link.href.startsWith("http");
+    const target = isExternal ? ' target="_blank" rel="noreferrer"' : "";
+
+    return `
+        <a href="${item.link.href}"${target}
+            class="mt-4 inline-flex text-base font-black text-amber-200 transition hover:text-amber-100">
+            ${item.link.label} &rarr;
+        </a>
     `;
 }
