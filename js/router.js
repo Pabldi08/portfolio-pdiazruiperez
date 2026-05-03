@@ -1,6 +1,6 @@
-import { homeView } from "./views/homeView.js";
-import { projectDetailView } from "./views/projectDetailView.js";
-import { projectsView } from "./views/projectsView.js";
+import { homeView } from "./views/homeView.js?v=839e0ab6d1";
+import { projectDetailView } from "./views/projectDetailView.js?v=839e0ab6d1";
+import { projectsView } from "./views/projectsView.js?v=839e0ab6d1";
 
 let activeProjectFilter = "Todos";
 
@@ -16,7 +16,8 @@ export function renderRoute() {
 
     const sectionRoutes = {
         "/stack": "stack",
-        "/sobre-mi": "sobre-mi",
+        "/cv": "cv",
+        "/sobre-mi": "cv",
         "/contacto": "contacto"
     };
 

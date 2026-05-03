@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Onest";
+    src: url("../assets/fonts/onest/WOFF/Onest-Regular.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Onest";
+    src: url("../assets/fonts/onest/WOFF/Onest-Medium.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.site-background,
+.site-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+}
+
+.site-background {
+    background:
+        radial-gradient(circle at top left, rgba(16, 185, 129, 0.16), transparent 28%),
+        linear-gradient(135deg, #09090b 0%, #111827 45%, #111111 100%);
+}
+
+.site-grid {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.text-description {
+    font-family: "Onest", ui-sans-serif, system-ui, sans-serif;
+}

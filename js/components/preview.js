@@ -34,41 +34,28 @@ export function getAccentClasses(accent) {
 }
 
 export function renderPreview(project) {
-    if (project.image?.src) {
-        return `
-            <div class="h-56 overflow-hidden border-b border-white/10 bg-zinc-950">
-                <img src="${assetSrc(project.image.src)}" alt="${project.image.alt ?? project.title}" class="h-full w-full object-cover object-center">
-            </div>
-        `;
-    }
-
     const classes = getAccentClasses(project.accent);
 
     return `
-        <div class="border-b border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-5">
-            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                <div class="flex items-center justify-between gap-3">
-                    <span class="rounded-full ${classes.bg} px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] ${classes.text}">
-                        Vista previa
-                    </span>
-                    <span class="text-xs font-semibold text-zinc-500">Sustituible por demo real</span>
+        <div class="h-56 overflow-hidden border-b border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6">
+            <div class="flex h-full items-end justify-between gap-5">
+                <div class="grid h-full flex-1 grid-cols-4 gap-3 opacity-90">
+                    <span class="rounded-xl bg-white/[0.04]"></span>
+                    <span class="rounded-xl ${classes.bg}"></span>
+                    <span class="rounded-xl bg-white/[0.06]"></span>
+                    <span class="rounded-xl bg-white/[0.03]"></span>
+                    <span class="col-span-2 rounded-xl bg-white/[0.06]"></span>
+                    <span class="rounded-xl bg-white/[0.03]"></span>
+                    <span class="rounded-xl ${classes.bg}"></span>
+                    <span class="rounded-xl bg-white/[0.03]"></span>
+                    <span class="rounded-xl bg-white/[0.06]"></span>
+                    <span class="col-span-2 rounded-xl bg-white/[0.04]"></span>
                 </div>
 
-                <div class="mt-5 grid gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-end">
-                    <div>
-                        <p class="text-lg font-black text-white">${project.title}</p>
-                        <p class="mt-2 max-w-md text-sm leading-6 text-zinc-400">
-                            Usa este bloque como placeholder comun para todos los proyectos o reemplazalo por una captura cuando tengas una demo visual.
-                        </p>
-                    </div>
-
-                    <div class="grid h-24 grid-cols-3 gap-2">
-                        <span class="rounded-xl bg-white/10"></span>
-                        <span class="rounded-xl bg-white/20"></span>
-                        <span class="rounded-xl bg-white/10"></span>
-                        <span class="col-span-2 rounded-xl bg-white/10"></span>
-                        <span class="rounded-xl ${classes.bg}"></span>
-                    </div>
+                <div class="flex h-full w-24 flex-col justify-end gap-3">
+                    <span class="h-20 rounded-2xl ${classes.bg}"></span>
+                    <span class="h-10 rounded-2xl bg-white/[0.08]"></span>
+                    <span class="h-6 rounded-2xl bg-white/[0.04]"></span>
                 </div>
             </div>
         </div>
@@ -83,10 +70,3 @@ export function tagList(project) {
     `).join("");
 }
 
-function assetSrc(src) {
-    if (src.startsWith("/") || src.startsWith("http") || src.startsWith("data:")) {
-        return src;
-    }
-
-    return `/${src}`;
-}

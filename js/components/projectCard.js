@@ -1,4 +1,4 @@
-import { getAccentClasses, renderPreview, tagList } from "./preview.js";
+import { getAccentClasses, renderPreview, tagList } from "./preview.js?v=839e0ab6d1";
 
 export function projectCard(project) {
     const classes = getAccentClasses(project.accent);
@@ -14,7 +14,7 @@ export function projectCard(project) {
                 </div>
                 <h3 class="text-2xl font-black text-white group-hover:${classes.text}">${project.title}</h3>
                 <p class="mt-2 text-sm font-semibold text-zinc-500">${project.subtitle}</p>
-                <p class="mt-4 leading-7 text-zinc-400">${project.summary}</p>
+                <p class="text-description mt-4 leading-7 text-zinc-400">${project.summary}</p>
                 <div class="mt-6 flex flex-wrap gap-2">${tagList(project)}</div>
             </div>
         </a>

@@ -50,6 +50,17 @@ export function iconLinkedIn() {
     `;
 }
 
+export function iconBriefcase() {
+    return `
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-8 w-8 fill-none stroke-current stroke-2">
+            <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4 7h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" stroke-linejoin="round"></path>
+            <path d="M2 12h20" stroke-linecap="round"></path>
+            <path d="M10 12v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    `;
+}
+
 export function iconCode() {
     return `
         <svg aria-hidden="true" viewBox="0 0 24 24" class="h-9 w-9 fill-none stroke-current stroke-2">

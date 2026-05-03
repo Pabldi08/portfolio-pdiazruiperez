@@ -1,5 +1,5 @@
-import { getAllTags, getProjectsByTag } from "../data/projects.js";
-import { projectCard } from "../components/projectCard.js";
+import { getAllTags, getProjectsByTag } from "../data/projects.js?v=839e0ab6d1";
+import { projectCard } from "../components/projectCard.js?v=839e0ab6d1";
 
 export function projectsView(activeFilter) {
     const tags = getAllTags();
@@ -11,7 +11,7 @@ export function projectsView(activeFilter) {
             <div class="mb-10 max-w-3xl">
                 <p class="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">Todos los proyectos</p>
                 <h1 class="text-5xl font-black tracking-tight md:text-7xl">El taller completo.</h1>
-                <p class="mt-5 text-lg leading-8 text-zinc-400">
+                <p class="text-description mt-5 text-lg leading-8 text-zinc-400">
                     Aqu&iacute; aparecen tanto los proyectos terminados como los que siguen creciendo. Cada tarjeta abre una vista con m&aacute;s detalle,
                     enlace a GitHub, demo interactiva o ejecutable cuando exista.
                 </p>

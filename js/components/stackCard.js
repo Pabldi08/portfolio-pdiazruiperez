@@ -1,4 +1,4 @@
-import { iconCode, iconDatabase, iconGitBranch, iconList } from "./icons.js";
+import { iconCode, iconDatabase, iconGitBranch, iconList } from "./icons.js?v=839e0ab6d1";
 
 const icons = {
     code: iconCode,
@@ -15,7 +15,7 @@ export function stackCard(item) {
             </div>
             <div>
                 <h3 class="font-black text-zinc-100">${item.title}</h3>
-                <p class="mt-2 text-sm leading-6 text-zinc-400">${item.description}</p>
+                <p class="text-description mt-2 text-sm leading-6 text-zinc-400">${item.description}</p>
             </div>
         </div>
     `;

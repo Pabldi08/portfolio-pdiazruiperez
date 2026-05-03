@@ -1,4 +1,4 @@
-import { iconGitHub, iconLinkedIn, iconMail, iconPhone } from "./icons.js";
+import { iconGitHub, iconLinkedIn, iconMail, iconPhone } from "./icons.js?v=839e0ab6d1";
 
 const icons = {
     github: iconGitHub,
@@ -12,13 +12,11 @@ export function contactLink(contact) {
 
     return `
         <a href="${contact.href}" target="${externalTarget(contact.href)}" rel="noreferrer"
-            class="group flex min-h-32 items-center gap-5 rounded-2xl border border-white/10 bg-zinc-950/70 p-7 text-left transition hover:-translate-y-1 hover:border-emerald-400/50">
-            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300 transition group-hover:bg-emerald-400 group-hover:text-zinc-950">
+            aria-label="${contact.type}: ${contact.label}"
+            title="${contact.type}: ${contact.label}"
+            class="group inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-zinc-950/75 text-emerald-300 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-emerald-400 hover:text-zinc-950">
+            <span class="inline-flex h-5 w-5 items-center justify-center">
                 ${icon}
-            </span>
-            <span class="min-w-0">
-                <span class="block text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">${contact.type}</span>
-                <span class="contact-label mt-2 block text-base font-bold leading-6 text-zinc-100 lg:text-[1.05rem] xl:text-lg">${contact.label}</span>
             </span>
         </a>
     `;
