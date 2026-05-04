@@ -1,4 +1,4 @@
-import { iconGitHub, iconLinkedIn, iconMail, iconPhone } from "./icons.js?v=839e0ab6d1";
+import { iconGitHub, iconLinkedIn, iconMail, iconPhone } from "./icons.js?v=93244813b8";
 
 const icons = {
     github: iconGitHub,

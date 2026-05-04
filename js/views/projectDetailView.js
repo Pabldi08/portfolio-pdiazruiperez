@@ -1,7 +1,7 @@
-import { getProjectBySlug } from "../data/projects.js?v=839e0ab6d1";
-import { iconDownload, iconGitHub, iconTerminal } from "../components/icons.js?v=839e0ab6d1";
-import { getAccentClasses, renderPreview, tagList } from "../components/preview.js?v=839e0ab6d1";
-import { renderVirtualConsole } from "../components/virtualConsole.js?v=839e0ab6d1";
+import { getProjectBySlug } from "../data/projects.js?v=93244813b8";
+import { iconDownload, iconGitHub, iconTerminal } from "../components/icons.js?v=93244813b8";
+import { getAccentClasses, renderPreview, tagList } from "../components/preview.js?v=93244813b8";
+import { renderVirtualConsole } from "../components/virtualConsole.js?v=93244813b8";
 
 export function projectDetailView(slug) {
     const project = getProjectBySlug(slug);

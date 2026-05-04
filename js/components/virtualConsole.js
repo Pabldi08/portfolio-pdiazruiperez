@@ -1,5 +1,5 @@
-import { getProjectBySlug } from "../data/projects.js?v=839e0ab6d1";
-import { getAccentClasses } from "./preview.js?v=839e0ab6d1";
+import { getProjectBySlug } from "../data/projects.js?v=93244813b8";
+import { getAccentClasses } from "./preview.js?v=93244813b8";
 
 export function renderVirtualConsole(project) {
     if (!project.console) {
