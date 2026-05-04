@@ -66,25 +66,6 @@ export const projects = [
         }
     },
     {
-        slug: "portfolio",
-        title: "Portfolio personal",
-        subtitle: "Web est&aacute;tica para presentar proyectos",
-        featured: false,
-        status: "En evoluci&oacute;n",
-        accent: "cyan",
-        tags: ["HTML", "Tailwind", "JavaScript"],
-        summary: "Portfolio responsive con navegaci&oacute;n por vistas, proyectos destacados, listado completo y p&aacute;ginas de detalle.",
-        description: "Esta web funciona como carta de presentaci&oacute;n y como espacio para documentar la evoluci&oacute;n de los proyectos. Est&aacute; hecha de forma sencilla para que sea f&aacute;cil de mantener, editar y publicar sin depender de frameworks pesados. Realizado con ayuda de dieseño con Codex",
-        highlights: [
-            "Vista principal con proyectos destacados.",
-            "Listado completo de proyectos con tarjetas interactivas.",
-            "Detalle individual con enlaces a repositorio y ejecutables cuando existan."
-        ],
-        githubUrl: "https://github.com/Pabldi08/portfolio-pdiazruiperez",
-        artifact: null,
-        preview: "web"
-    },
-    {
         slug: "flickit",
         title: "FlickIt",
         subtitle: "Arquitectura por capas y diseño backend",
@@ -146,6 +127,25 @@ export const projects = [
             url: "",
         },
         preview: "backend"
+    },
+    {
+        slug: "portfolio",
+        title: "Portfolio personal",
+        subtitle: "Web est&aacute;tica para presentar proyectos",
+        featured: false,
+        status: "En evoluci&oacute;n",
+        accent: "cyan",
+        tags: ["HTML", "Tailwind", "JavaScript"],
+        summary: "Portfolio responsive con navegaci&oacute;n por vistas, proyectos destacados, listado completo y p&aacute;ginas de detalle.",
+        description: "Esta web funciona como carta de presentaci&oacute;n y como espacio para documentar la evoluci&oacute;n de los proyectos. Est&aacute; hecha de forma sencilla para que sea f&aacute;cil de mantener, editar y publicar sin depender de frameworks pesados. Realizado con ayuda de dieseño con Codex",
+        highlights: [
+            "Vista principal con proyectos destacados.",
+            "Listado completo de proyectos con tarjetas interactivas.",
+            "Detalle individual con enlaces a repositorio y ejecutables cuando existan."
+        ],
+        githubUrl: "https://github.com/Pabldi08/portfolio-pdiazruiperez",
+        artifact: null,
+        preview: "web"
     }
 ];
 
