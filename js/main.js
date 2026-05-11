@@ -1,7 +1,12 @@
-import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=09a2de1e55";
-import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=09a2de1e55";
+import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=36f8916eb4";
+import { handleBooterClick, handleBooterKeydown, shouldShowBooter, startBooter, stopBooter } from "./components/booter.js?v=36f8916eb4";
+import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=36f8916eb4";
 
 document.addEventListener("click", (event) => {
+    if (handleBooterClick(event)) {
+        return;
+    }
+
     const internalLink = event.target.closest("a[href^='/']");
     if (internalLink && internalLink.origin === window.location.origin) {
         event.preventDefault();
@@ -27,6 +32,10 @@ document.addEventListener("click", (event) => {
     }
 });
 
+document.addEventListener("keydown", (event) => {
+    handleBooterKeydown(event);
+});
+
 document.addEventListener("submit", (event) => {
     const consoleForm = event.target.closest("[data-console-form]");
     if (!consoleForm) return;
@@ -44,5 +53,23 @@ document.addEventListener("submit", (event) => {
     }
 });
 
-window.addEventListener("popstate", renderRoute);
-renderRoute();
+window.addEventListener("popstate", renderApp);
+renderApp();
+
+function renderApp() {
+    if (shouldShowBooter()) {
+        setShellVisible(false);
+        startBooter();
+        return;
+    }
+
+    stopBooter();
+    setShellVisible(true);
+    renderRoute();
+}
+
+function setShellVisible(visible) {
+    document.querySelectorAll("[data-site-shell]").forEach(element => {
+        element.hidden = !visible;
+    });
+}

@@ -53,10 +53,10 @@ Para desarrollar con recompilacion automatica de Tailwind CSS:
 npm run watch:css
 ```
 
-Para servir la web localmente puedes usar cualquier servidor estatico. Una opcion simple con Node.js es:
+Para servir la web localmente con soporte para rutas internas como `/proyectos`:
 
 ```bash
-npx serve .
+npm run start
 ```
 
 Despues abre la URL local que muestre la terminal, normalmente `http://localhost:3000`.

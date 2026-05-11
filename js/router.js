@@ -1,6 +1,6 @@
-import { homeView } from "./views/homeView.js?v=09a2de1e55";
-import { projectDetailView } from "./views/projectDetailView.js?v=09a2de1e55";
-import { projectsView } from "./views/projectsView.js?v=09a2de1e55";
+import { homeView } from "./views/homeView.js?v=36f8916eb4";
+import { projectDetailView } from "./views/projectDetailView.js?v=36f8916eb4";
+import { projectsView } from "./views/projectsView.js?v=36f8916eb4";
 
 let activeProjectFilter = "Todos";
 

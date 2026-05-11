@@ -3,9 +3,11 @@
     "build": "npm run build:css && node scripts/cache-bust.mjs",
     "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
     "cache-bust": "node scripts/cache-bust.mjs",
+    "start": "serve .",
     "watch:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
   },
   "devDependencies": {
+    "serve": "^14.2.6",
     "tailwindcss": "^3.4.17"
   }
 }
