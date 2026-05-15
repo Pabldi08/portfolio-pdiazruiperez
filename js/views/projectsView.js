@@ -1,5 +1,5 @@
-import { getAllTags, getProjectsByTag } from "../data/projects.js?v=36f8916eb4";
-import { projectCard } from "../components/projectCard.js?v=36f8916eb4";
+import { getAllTags, getProjectsByTag } from "../data/projects.js?v=f350c9147b";
+import { projectCard } from "../components/projectCard.js?v=f350c9147b";
 
 export function projectsView(activeFilter) {
     const tags = getAllTags();

@@ -1,7 +1,7 @@
-import { homeView } from "./views/homeView.js?v=36f8916eb4";
-import { projectDetailView } from "./views/projectDetailView.js?v=36f8916eb4";
-import { projectsView } from "./views/projectsView.js?v=36f8916eb4";
-import { getProjectBySlug } from "./data/projects.js?v=36f8916eb4";
+import { homeView } from "./views/homeView.js?v=f350c9147b";
+import { projectDetailView } from "./views/projectDetailView.js?v=f350c9147b";
+import { projectsView } from "./views/projectsView.js?v=f350c9147b";
+import { getProjectBySlug } from "./data/projects.js?v=f350c9147b";
 
 let activeProjectFilter = "Todos";
 

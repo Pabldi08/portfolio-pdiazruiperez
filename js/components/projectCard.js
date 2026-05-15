@@ -1,4 +1,4 @@
-import { getAccentClasses, renderPreview, tagList } from "./preview.js?v=36f8916eb4";
+import { getAccentClasses, renderPreview, tagList } from "./preview.js?v=f350c9147b";
 
 export function projectCard(project) {
     const classes = getAccentClasses(project.accent);
