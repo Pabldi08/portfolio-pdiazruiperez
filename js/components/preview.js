@@ -26,6 +26,13 @@ export const accentClasses = {
         bg: "bg-rose-300/10",
         button: "bg-rose-300 text-zinc-950 hover:bg-rose-200",
         ring: "border-rose-300/25"
+    },
+    violet: {
+        border: "hover:border-violet-400/60",
+        text: "text-violet-300",
+        bg: "bg-violet-400/10",
+        button: "bg-violet-400 text-zinc-950 hover:bg-violet-300",
+        ring: "border-violet-400/25"
     }
 };
 

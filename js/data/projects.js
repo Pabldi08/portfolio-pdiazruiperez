@@ -112,7 +112,7 @@ export const projects = [
         subtitle: "Arquitectura por capas y diseño backend",
         featured: true,
         status: "Terminado",
-        accent: "",
+        accent: "violet",
         tags: ["Java", "MVC", "POO"],
         summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC. ",
         description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales.",
@@ -137,7 +137,7 @@ export const projects = [
         accent: "cyan",
         tags: ["HTML", "Tailwind", "JavaScript"],
         summary: "Portfolio responsive con navegaci&oacute;n por vistas, proyectos destacados, listado completo y p&aacute;ginas de detalle.",
-        description: "Esta web funciona como carta de presentaci&oacute;n y como espacio para documentar la evoluci&oacute;n de los proyectos. Est&aacute; hecha de forma sencilla para que sea f&aacute;cil de mantener, editar y publicar sin depender de frameworks pesados. Realizado con ayuda de dieseño con Codex",
+        description: "Esta web funciona como carta de presentaci&oacute;n y como espacio para documentar la evoluci&oacute;n de los proyectos. Est&aacute; hecha de forma sencilla para que sea f&aacute;cil de mantener, editar y publicar sin depender de frameworks pesados.",
         highlights: [
             "Vista principal con proyectos destacados.",
             "Listado completo de proyectos con tarjetas interactivas.",

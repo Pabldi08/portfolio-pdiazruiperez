@@ -3,13 +3,13 @@ const bootOptions = [
     {
         id: "portfolio",
         label: "Portfolio",
-        description: "Entraras en la pagina principal con proyectos destacados, CV, stack tecnico y enlaces de contacto.",
+        description: "Entrar&aacute;s en la p&aacute;gina principal con proyectos destacados, CV, stack t&eacute;cnico y enlaces de contacto.",
         path: "/"
     },
     {
         id: "projects",
         label: "Projects",
-        description: "Iras directamente al listado completo de proyectos para revisar codigo, tecnologias usadas y detalles de cada entrega.",
+        description: "Ir&aacute;s directamente al listado completo de proyectos para revisar c&oacute;digo, tecnolog&iacute;as usadas y detalles de cada entrega.",
         path: "/proyectos"
     }
 ];
@@ -86,33 +86,49 @@ function booterView() {
     const selectedOption = bootOptions[selectedOptionIndex];
 
     return `
-        <section class="min-h-screen bg-[#050506] px-4 py-6 font-mono text-zinc-100 sm:px-8" aria-labelledby="boot-title">
-            <div class="mx-auto flex min-h-[calc(100vh-3rem)] max-w-6xl flex-col">
-                <header class="grid gap-4 text-sm font-black sm:grid-cols-[1fr_auto_1fr] sm:items-start">
-                    <p class="tracking-wide text-zinc-300"><span class="text-emerald-400">ARROWS</span> Select&nbsp;&nbsp;&nbsp; <span class="text-emerald-400">ENTER</span> Boot</p>
-                    <h1 id="boot-title" class="text-center text-base text-emerald-400">pdruiperez Bootloader</h1>
-                    <p class="text-left tracking-wide text-zinc-300 sm:text-right"><span class="text-emerald-400">B</span> Blank Entry</p>
+        <section class="min-h-screen bg-[#050506] px-4 py-5 font-mono text-zinc-100 sm:px-8" aria-labelledby="boot-title">
+            <div class="mx-auto flex min-h-[calc(100vh-2.5rem)] max-w-5xl flex-col">
+
+                <header class="text-xs">
+                    <div class="flex flex-wrap gap-x-6 gap-y-0.5 text-zinc-600 mb-3">
+                        <span>pdruiperez UEFI <span class="text-zinc-500">v2.6.0</span></span>
+                        <span class="text-zinc-500">Arch Linux x86_64</span>
+                        <span>CPU: Intel Core i7-12700H</span>
+                        <span>RAM: 16384 MB <span class="text-emerald-400">OK</span></span>
+                        <span>Boot: /dev/nvme0n1p1</span>
+                    </div>
+                    <div class="border-y border-zinc-800 py-2 grid sm:grid-cols-[1fr_auto_1fr] items-center gap-1 font-bold tracking-wide">
+                        <p class="text-zinc-400"><span class="text-emerald-400">↑↓</span> Select&nbsp;&nbsp;&nbsp;<span class="text-emerald-400">Enter</span> Boot</p>
+                        <h1 id="boot-title" class="text-center text-emerald-400">pdruiperez Bootloader</h1>
+                        <p class="text-zinc-400 sm:text-right"><span class="text-emerald-400">B</span> Blank Entry</p>
+                    </div>
                 </header>
 
-                <div class="flex flex-1 flex-col items-center justify-center py-12">
-                    <pre class="mx-auto mb-12 w-fit max-w-full overflow-x-auto whitespace-pre text-left text-xs leading-[0.68] text-emerald-400 sm:text-sm" aria-label="Logo provisional en ASCII">${asciiLogo()}</pre>
+                <div class="flex flex-1 flex-col items-center justify-center py-10 gap-10">
+                    <div class="text-center">
+                        <pre class="mx-auto w-fit max-w-full overflow-x-auto whitespace-pre text-left text-[0.55rem] leading-[1.15] text-emerald-400 sm:text-xs" aria-label="Logo PABLO en ASCII">${asciiLogo()}</pre>
+                        <p class="mt-3 text-xs text-zinc-600 tracking-[0.25em]">pablo d&iacute;az ruip&eacute;rez &middot; software developer</p>
+                    </div>
 
-                    <div class="w-full max-w-2xl text-center">
-                        <div class="mx-auto max-w-md text-left" role="listbox" aria-label="Opciones de arranque">
+                    <div class="w-full max-w-xl">
+                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-700 mb-1">── Boot Options ──────────────────────────</p>
+                        <div role="listbox" aria-label="Opciones de arranque" class="mb-8">
                             ${bootOptions.map((option, index) => bootOption(option, index)).join("")}
                         </div>
 
-                        <div class="mx-auto mt-8 max-w-xl text-left">
-                            <p class="text-sm font-black text-cyan-300">Descripcion de la seleccion</p>
-                            <p class="mt-2 text-sm leading-6 text-zinc-300">${selectedOption.description}</p>
+                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-700 mb-2">── Selected ──────────────────────────────</p>
+                        <div class="min-h-[5rem]">
+                            <p class="text-sm leading-relaxed text-zinc-400 max-w-lg" role="status" aria-live="polite">${selectedOption.description}</p>
                         </div>
                     </div>
                 </div>
 
-                <footer class="pb-2 text-center text-sm text-zinc-400" role="status" aria-live="polite">
-                    Seleccione una entrada y pulse <span class="font-black text-emerald-300">Enter</span> para arrancar.
+                <footer class="border-t border-zinc-800 pt-3 pb-1 text-xs flex flex-wrap justify-between gap-2 text-zinc-600">
+                    <span>Seleccione una entrada y pulse <span class="font-bold text-emerald-300">Enter</span> para arrancar.</span>
+                    <span class="hidden sm:inline text-zinc-700">pdruiperez.com</span>
                     <span class="sr-only">Use flecha arriba, flecha abajo y Enter para seleccionar.</span>
                 </footer>
+
             </div>
         </section>
     `;
@@ -122,26 +138,24 @@ function bootOption(option, index) {
     const selected = index === selectedOptionIndex;
     const activeClasses = selected
         ? "bg-emerald-400 text-zinc-950"
-        : "text-zinc-200 hover:bg-white/10 hover:text-emerald-300";
+        : "text-zinc-300 hover:bg-white/[0.06] hover:text-emerald-300";
 
     return `
         <button type="button"
-            class="block w-full px-3 py-1 text-left text-lg font-black leading-7 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${activeClasses}"
+            class="block w-full px-3 py-1.5 text-left text-sm font-black leading-6 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 ${activeClasses}"
             data-boot-option="${option.id}"
             role="option"
             aria-selected="${selected}">
-            <span aria-hidden="true">${selected ? "|->" : "|  "}</span> ${option.label}
+            <span aria-hidden="true" class="mr-3 inline-block w-3 text-center">${selected ? "▶" : " "}</span>${option.label}
         </button>
     `;
 }
 
-
 function asciiLogo() {
-    return String.raw`██████  █████  █████  ██      ████      █████
-██   ██ ██  ██ ██  ██ ██     ██  ██     ██  ██
-██   ██ ██  ██ ██  ██ ██     ██  ██     ██  ██
-██████  ██████ █████  ██     ██  ██     ██  ██
-██      ██  ██ ██  ██ ██     ██  ██     ██  ██
-██      ██  ██ ██  ██ ██     ██  ██     ██  ██
-██      ██  ██ █████  ██████  ████      █████  ██`;
+    return String.raw`██████╗  █████╗ ██████╗ ██╗      ██████╗
+██╔══██╗██╔══██╗██╔══██╗██║     ██╔═══██╗
+██████╔╝███████║██████╔╝██║     ██║   ██║
+██╔═══╝ ██╔══██║██╔══██╗██║     ██║   ██║
+██║     ██║  ██║██████╔╝███████╗╚██████╔╝
+╚═╝     ╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝`;
 }
