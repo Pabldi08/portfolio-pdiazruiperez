@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "npm run build:css && node scripts/cache-bust.mjs",
-    "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "build": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify && node scripts/cache-bust.mjs",
+    "build:css": "npm run build",
     "cache-bust": "node scripts/cache-bust.mjs",
     "start": "serve .",
     "watch:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"

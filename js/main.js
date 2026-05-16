@@ -1,6 +1,6 @@
-import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=f350c9147b";
-import { handleBooterClick, handleBooterKeydown, shouldShowBooter, startBooter, stopBooter } from "./components/booter.js?v=f350c9147b";
-import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=f350c9147b";
+import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=cc68560cfc";
+import { handleBooterClick, handleBooterKeydown, shouldShowBooter, startBooter, stopBooter } from "./components/booter.js?v=cc68560cfc";
+import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=cc68560cfc";
 
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");

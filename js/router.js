@@ -1,7 +1,8 @@
-import { homeView } from "./views/homeView.js?v=f350c9147b";
-import { projectDetailView } from "./views/projectDetailView.js?v=f350c9147b";
-import { projectsView } from "./views/projectsView.js?v=f350c9147b";
-import { getProjectBySlug } from "./data/projects.js?v=f350c9147b";
+import { homeView } from "./views/homeView.js?v=cc68560cfc";
+import { projectDetailView } from "./views/projectDetailView.js?v=cc68560cfc";
+import { projectsView } from "./views/projectsView.js?v=cc68560cfc";
+import { getProjectBySlug } from "./data/projects.js?v=cc68560cfc";
+import { setupScrollAnimations } from "./animations.js?v=cc68560cfc";
 
 let activeProjectFilter = "Todos";
 
@@ -17,6 +18,7 @@ export function renderRoute() {
         setTitle(null);
         app.innerHTML = homeView();
         window.scrollTo(0, 0);
+        setupScrollAnimations();
         return;
     }
 
@@ -30,6 +32,7 @@ export function renderRoute() {
     if (sectionRoutes[path]) {
         setTitle(null);
         app.innerHTML = homeView();
+        setupScrollAnimations();
         requestAnimationFrame(() => {
             document.querySelector(`#${sectionRoutes[path]}`)?.scrollIntoView({ behavior: "smooth" });
         });
@@ -40,6 +43,7 @@ export function renderRoute() {
         setTitle("Proyectos");
         app.innerHTML = projectsView(activeProjectFilter);
         window.scrollTo(0, 0);
+        setupScrollAnimations();
         return;
     }
 
@@ -49,11 +53,13 @@ export function renderRoute() {
         setTitle(project?.title ?? "Proyecto");
         app.innerHTML = projectDetailView(slug);
         window.scrollTo(0, 0);
+        setupScrollAnimations();
         return;
     }
 
     setTitle("Página no encontrada");
     app.innerHTML = notFoundView();
+    setupScrollAnimations();
 }
 
 function notFoundView() {

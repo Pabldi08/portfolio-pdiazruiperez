@@ -1,11 +1,11 @@
-import { getFeaturedProjects } from "../data/projects.js?v=f350c9147b";
-import { contacts } from "../data/contacts.js?v=f350c9147b";
-import { resumeItems } from "../data/resume.js?v=f350c9147b";
-import { stackItems } from "../data/stack.js?v=f350c9147b";
-import { contactLink } from "../components/contactLink.js?v=f350c9147b";
-import { iconBriefcase } from "../components/icons.js?v=f350c9147b";
-import { projectCard } from "../components/projectCard.js?v=f350c9147b";
-import { stackCard } from "../components/stackCard.js?v=f350c9147b";
+import { getFeaturedProjects } from "../data/projects.js?v=cc68560cfc";
+import { contacts } from "../data/contacts.js?v=cc68560cfc";
+import { resumeItems } from "../data/resume.js?v=cc68560cfc";
+import { stackItems } from "../data/stack.js?v=cc68560cfc";
+import { contactLink } from "../components/contactLink.js?v=cc68560cfc";
+import { iconBriefcase } from "../components/icons.js?v=cc68560cfc";
+import { projectCard } from "../components/projectCard.js?v=cc68560cfc";
+import { stackCard } from "../components/stackCard.js?v=cc68560cfc";
 
 export function homeView() {
     const featured = getFeaturedProjects();
