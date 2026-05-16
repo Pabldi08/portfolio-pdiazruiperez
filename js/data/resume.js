@@ -7,12 +7,25 @@ export const resumeItems = [
         link: {
             href: "https://www.linkedin.com/in/pdruiperez",
             label: "Ver perfil en LinkedIn"
+        },
+        en: {
+            title: "Computer Engineering Student",
+            organization: "University education",
+            period: "Present",
+            description: "I learn by building projects focused on software fundamentals: object-oriented programming, data structures, business logic and maintainable code.",
+            link: { href: "https://www.linkedin.com/in/pdruiperez", label: "View LinkedIn profile" }
         }
     },
     {
-        title: "Bachillerato Tecnonl&oacute;gico",
-        organization: "Formaci&oacute;n actual",
-        period: "2022-2024",
-        description: "Realicé el Bachillerato Tecnonl&oacute;gico en el Colegio Nuevo Equipo de Madrid donde pude adquirir competencias como: Trabajo en equipo, hablar en público y organizar "
+        title: "Bachillerato Tecnol&oacute;gico",
+        organization: "Colegio Nuevo Equipo, Madrid",
+        period: "2022–2024",
+        description: "Realic&eacute; el Bachillerato Tecnol&oacute;gico donde adquir&iacute; competencias como trabajo en equipo, hablar en p&uacute;blico y organizaci&oacute;n.",
+        en: {
+            title: "Technology Baccalaureate",
+            organization: "Colegio Nuevo Equipo, Madrid",
+            period: "2022–2024",
+            description: "I completed the Technology Baccalaureate where I developed skills such as teamwork, public speaking and organisation."
+        }
     }
 ];

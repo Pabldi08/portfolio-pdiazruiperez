@@ -1,6 +1,8 @@
-import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=cf5e129c45";
-import { handleBooterClick, handleBooterKeydown, shouldShowBooter, startBooter, stopBooter } from "./components/booter.js?v=cf5e129c45";
-import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=cf5e129c45";
+import { navigateTo, renderRoute, setProjectFilter } from "./router.js?v=771f78e24b";
+import { handleBooterClick, handleBooterKeydown, shouldShowBooter, startBooter, stopBooter } from "./components/booter.js?v=771f78e24b";
+import { closeConsolePanel, handleConsoleSubmit, openConsolePanel } from "./components/virtualConsole.js?v=771f78e24b";
+import { handleContactSubmit } from "./views/contactView.js?v=771f78e24b";
+import { applyI18nToStatic, getLang, setLang } from "./i18n.js?v=771f78e24b";
 
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -23,6 +25,15 @@ mobileMenuBtn?.addEventListener("click", () => {
 
 document.addEventListener("click", (event) => {
     if (handleBooterClick(event)) {
+        return;
+    }
+
+    const langToggle = event.target.closest("[data-lang-toggle]");
+    if (langToggle) {
+        setLang(getLang() === "es" ? "en" : "es");
+        closeMobileMenu();
+        renderRoute();
+        applyI18nToStatic();
         return;
     }
 
@@ -58,22 +69,27 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("submit", (event) => {
     const consoleForm = event.target.closest("[data-console-form]");
-    if (!consoleForm) return;
+    if (consoleForm) {
+        event.preventDefault();
+        const input = consoleForm.querySelector('input[name="command"]');
+        const command = input?.value ?? "";
+        handleConsoleSubmit(consoleForm.dataset.consoleForm, command);
+        if (input) {
+            input.value = "";
+            input.focus();
+        }
+        return;
+    }
 
-    event.preventDefault();
-
-    const input = consoleForm.querySelector('input[name="command"]');
-    const command = input?.value ?? "";
-
-    handleConsoleSubmit(consoleForm.dataset.consoleForm, command);
-
-    if (input) {
-        input.value = "";
-        input.focus();
+    const contactForm = event.target.closest("[data-contact-form]");
+    if (contactForm) {
+        event.preventDefault();
+        handleContactSubmit(contactForm);
     }
 });
 
 window.addEventListener("popstate", renderApp);
+applyI18nToStatic();
 renderApp();
 
 function renderApp() {
@@ -82,12 +98,14 @@ function renderApp() {
     if (shouldShowBooter()) {
         setShellVisible(false);
         startBooter();
+        applyI18nToStatic();
         return;
     }
 
     stopBooter();
     setShellVisible(true);
     renderRoute();
+    applyI18nToStatic();
 }
 
 function setShellVisible(visible) {

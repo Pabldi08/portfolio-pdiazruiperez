@@ -1,3 +1,5 @@
+import { t } from "../i18n.js?v=771f78e24b";
+
 // Add new boot entries here to extend the menu without touching the render logic.
 const bootOptions = [
     {
@@ -90,9 +92,9 @@ function booterView() {
             <div class="mx-auto flex min-h-[calc(100vh-2.5rem)] max-w-5xl flex-col">
 
                 <header class="text-xs">
-                    <div class="flex flex-wrap gap-x-6 gap-y-0.5 text-zinc-600 mb-3">
-                        <span>pdruiperez UEFI <span class="text-zinc-500">v2.6.0</span></span>
-                        <span class="text-zinc-500">Arch Linux x86_64</span>
+                    <div class="flex flex-wrap gap-x-6 gap-y-0.5 text-zinc-400 mb-3">
+                        <span>pdruiperez UEFI <span class="text-zinc-400">v2.6.0</span></span>
+                        <span class="text-zinc-400">Arch Linux x86_64</span>
                         <span>CPU: Intel Core i7-12700H</span>
                         <span>RAM: 16384 MB <span class="text-sky-400">OK</span></span>
                         <span>Boot: /dev/nvme0n1p1</span>
@@ -107,25 +109,25 @@ function booterView() {
                 <div class="flex flex-1 flex-col items-center justify-center py-10 gap-10">
                     <div class="text-center">
                         <pre class="mx-auto w-fit max-w-full overflow-x-auto whitespace-pre text-left text-[0.55rem] leading-[1.15] text-sky-400 sm:text-xs" aria-label="Logo PABLO en ASCII">${asciiLogo()}</pre>
-                        <p class="mt-3 text-xs text-zinc-600 tracking-[0.25em]">pablo d&iacute;az ruip&eacute;rez &middot; software developer</p>
+                        <p class="mt-3 text-xs text-zinc-400 tracking-[0.25em]">pablo d&iacute;az ruip&eacute;rez &middot; software developer</p>
                     </div>
 
                     <div class="w-full max-w-xl">
-                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-700 mb-1">── Boot Options ──────────────────────────</p>
+                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-500 mb-1">── Boot Options ──────────────────────────</p>
                         <div role="listbox" aria-label="Opciones de arranque" class="mb-8">
                             ${bootOptions.map((option, index) => bootOption(option, index)).join("")}
                         </div>
 
-                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-700 mb-2">── Selected ──────────────────────────────</p>
+                        <p class="text-[0.6rem] tracking-[0.25em] uppercase text-zinc-500 mb-2">── Selected ──────────────────────────────</p>
                         <div class="min-h-[5rem]">
-                            <p class="text-sm leading-relaxed text-zinc-400 max-w-lg" role="status" aria-live="polite">${selectedOption.description}</p>
+                            <p class="text-sm leading-relaxed text-zinc-400 max-w-lg" role="status" aria-live="polite">${t(`boot_desc_${selectedOption.id}`)}</p>
                         </div>
                     </div>
                 </div>
 
-                <footer class="border-t border-zinc-800 pt-3 pb-1 text-xs flex flex-wrap justify-between gap-2 text-zinc-600">
-                    <span>Seleccione una entrada y pulse <span class="font-bold text-sky-300">Enter</span> para arrancar.</span>
-                    <span class="hidden sm:inline text-zinc-700">pdruiperez.com</span>
+                <footer class="border-t border-zinc-800 pt-3 pb-1 text-xs flex flex-wrap justify-between gap-2 text-zinc-400">
+                    <span>${t("boot_footer")} <span class="font-bold text-sky-300">Enter</span> ${t("boot_footer_action")}</span>
+                    <span class="hidden sm:inline text-zinc-500">pdruiperez.com</span>
                     <span class="sr-only">Use flecha arriba, flecha abajo y Enter para seleccionar.</span>
                 </footer>
 

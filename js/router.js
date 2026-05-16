@@ -1,8 +1,10 @@
-import { homeView } from "./views/homeView.js?v=cf5e129c45";
-import { projectDetailView } from "./views/projectDetailView.js?v=cf5e129c45";
-import { projectsView } from "./views/projectsView.js?v=cf5e129c45";
-import { getProjectBySlug } from "./data/projects.js?v=cf5e129c45";
-import { setupScrollAnimations } from "./animations.js?v=cf5e129c45";
+import { homeView } from "./views/homeView.js?v=771f78e24b";
+import { projectDetailView } from "./views/projectDetailView.js?v=771f78e24b";
+import { projectsView } from "./views/projectsView.js?v=771f78e24b";
+import { contactView } from "./views/contactView.js?v=771f78e24b";
+import { getProjectBySlug } from "./data/projects.js?v=771f78e24b";
+import { setupScrollAnimations } from "./animations.js?v=771f78e24b";
+import { t } from "./i18n.js?v=771f78e24b";
 
 let activeProjectFilter = "Todos";
 
@@ -25,8 +27,7 @@ export function renderRoute() {
     const sectionRoutes = {
         "/stack": "stack",
         "/cv": "cv",
-        "/sobre-mi": "cv",
-        "/contacto": "contacto"
+        "/sobre-mi": "cv"
     };
 
     if (sectionRoutes[path]) {
@@ -36,6 +37,14 @@ export function renderRoute() {
         requestAnimationFrame(() => {
             document.querySelector(`#${sectionRoutes[path]}`)?.scrollIntoView({ behavior: "smooth" });
         });
+        return;
+    }
+
+    if (path === "/contacto") {
+        setTitle("Contacto");
+        app.innerHTML = contactView();
+        window.scrollTo(0, 0);
+        setupScrollAnimations();
         return;
     }
 
@@ -65,11 +74,11 @@ export function renderRoute() {
 function notFoundView() {
     return `
         <section class="mx-auto max-w-3xl px-6 py-24 text-center">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-sky-400">404</p>
-            <h1 class="mt-4 text-5xl font-black tracking-tight">P&aacute;gina no encontrada</h1>
-            <p class="mt-5 text-lg text-zinc-400">La ruta que buscas no existe o ha cambiado de direcci&oacute;n.</p>
+            <p class="text-sm font-bold uppercase tracking-[0.25em] text-sky-400">${t("not_found_label")}</p>
+            <h1 class="mt-4 text-5xl font-black tracking-tight">${t("not_found_title")}</h1>
+            <p class="mt-5 text-lg text-zinc-400">${t("not_found_desc")}</p>
             <a href="/" class="mt-10 inline-flex rounded-full bg-sky-400 px-7 py-3 font-bold text-zinc-950 transition hover:bg-sky-300">
-                Volver al inicio
+                ${t("not_found_back")}
             </a>
         </section>
     `;

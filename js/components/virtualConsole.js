@@ -1,5 +1,6 @@
-import { getProjectBySlug } from "../data/projects.js?v=cf5e129c45";
-import { getAccentClasses } from "./preview.js?v=cf5e129c45";
+import { getProjectBySlug } from "../data/projects.js?v=771f78e24b";
+import { getAccentClasses } from "./preview.js?v=771f78e24b";
+import { t } from "../i18n.js?v=771f78e24b";
 
 export function renderVirtualConsole(project) {
     if (!project.console) {
@@ -15,16 +16,16 @@ export function renderVirtualConsole(project) {
             <div class="rounded-3xl border border-white/10 bg-zinc-950/80 shadow-2xl shadow-black/40">
                 <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-6 py-4">
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-[0.3em] ${classes.text}">Consola virtual</p>
+                        <p class="text-xs font-bold uppercase tracking-[0.3em] ${classes.text}">${t("console_title")}</p>
                         <h2 class="mt-2 text-2xl font-black text-white">${project.console.title ?? project.title}</h2>
                         <p class="text-description mt-2 max-w-2xl text-sm leading-6 text-zinc-400">
-                            Entorno interactivo preparado para demos de proyectos de terminal. Puedes ampliar los comandos cuando quieras desde los datos del proyecto.
+                            ${t("console_desc")}
                         </p>
                     </div>
 
                     <button type="button" data-close-console="${project.slug}"
                         class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-bold text-zinc-300 transition hover:border-white/20 hover:text-white">
-                        Cerrar
+                        ${t("console_close")}
                     </button>
                 </div>
 
@@ -34,7 +35,7 @@ export function renderVirtualConsole(project) {
                             <span class="h-3 w-3 rounded-full bg-red-500"></span>
                             <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
                             <span class="h-3 w-3 rounded-full bg-green-500"></span>
-                            <span class="ml-3 text-xs text-zinc-500">runtime.web</span>
+                            <span class="ml-3 text-xs text-zinc-400">runtime.web</span>
                         </div>
 
                         <div class="min-h-[18rem] max-h-[24rem] space-y-2 overflow-y-auto px-4 py-5 font-mono text-sm text-zinc-200" data-console-output="${project.slug}">
@@ -51,7 +52,7 @@ export function renderVirtualConsole(project) {
                                     autocomplete="off"
                                     spellcheck="false"
                                     placeholder="/help"
-                                    class="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-zinc-600"
+                                    class="w-full border-0 bg-transparent text-sm text-white outline-none placeholder:text-zinc-500"
                                 >
                             </label>
                         </form>
@@ -59,11 +60,11 @@ export function renderVirtualConsole(project) {
 
                     <div class="space-y-4">
                         <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                            <p class="text-xs font-bold uppercase tracking-[0.24em] text-zinc-500">Comandos base</p>
+                            <p class="text-xs font-bold uppercase tracking-[0.24em] text-zinc-400">${t("console_commands_label")}</p>
                             <ul class="mt-4 space-y-3 text-sm text-zinc-300">
-                                <li><span class="${classes.text}">/help</span> muestra la ayuda inicial.</li>
-                                <li><span class="${classes.text}">/view</span> abre la demo visual.</li>
-                                <li><span class="${classes.text}">/clear</span> limpia el historial.</li>
+                                <li><span class="${classes.text}">/help</span> ${t("console_help_desc")}</li>
+                                <li><span class="${classes.text}">/view</span> ${t("console_view_desc")}</li>
+                                <li><span class="${classes.text}">/clear</span> ${t("console_clear_desc")}</li>
                             </ul>
                         </div>
 
@@ -159,7 +160,7 @@ function renderConsolePreview(project) {
 
     return `
         <div class="rounded-2xl border border-dashed border-white/10 bg-zinc-950/70 p-6">
-            <p class="text-xs font-bold uppercase tracking-[0.24em] text-zinc-500">Vista /view</p>
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-zinc-400">${t("console_view_label")}</p>
             <div class="mt-4 rounded-2xl border border-white/10 bg-gradient-to-br from-sky-400/10 via-cyan-400/10 to-transparent p-6">
                 <p class="text-lg font-black text-white">${project.console?.preview?.title ?? "Demo visual"}</p>
                 <p class="text-description mt-3 text-sm leading-6 text-zinc-400">

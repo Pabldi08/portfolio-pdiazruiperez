@@ -1,6 +1,4 @@
 // Cambia featured a true en los dos proyectos que quieras ensenar en la pagina principal.
-// Si quieres una captura solo para la demo del comando /view, usa:
-// console.preview.image: { src: "assets/projects/mario/mario-demo.png", alt: "Demo de Mario" }
 export const projects = [
     {
         slug: "mario-consola",
@@ -20,6 +18,18 @@ export const projects = [
         githubUrl: "https://github.com/Pabldi08/MarioBros-TP1",
         artifact: null,
         preview: "terminal",
+        en: {
+            title: "Mario on Console",
+            subtitle: "Console game with platformer logic",
+            status: "Finished",
+            summary: "Functional Mario clone in pure Java, with collision management, states, simple physics and console rendering.",
+            description: "My first contact with OOP. Separation of responsibilities and state management within a game. The main idea is to build a simple playable loop with entities, stage, collisions and rules clear enough to keep expanding. Keeping MVC in mind.",
+            highlights: [
+                "Main game loop and state update.",
+                "Entity, obstacle and collision management.",
+                "Console rendering to reinforce logic without relying on a graphics engine."
+            ]
+        },
         console: {
             ctaLabel: "Abrir consola virtual",
             title: "Mario Console Runtime",
@@ -68,24 +78,33 @@ export const projects = [
     {
         slug: "flickit",
         title: "FlickIt",
-        subtitle: "Arquitectura por capas y diseño backend",
+        subtitle: "Arquitectura por capas y dise&ntilde;o backend",
         featured: false,
         status: "Terminado",
         accent: "amber",
         tags: ["Java", "SQL", "MVC"],
-        summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC. ",
-        description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales. ",
+        summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC.",
+        description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales.",
         highlights: [
             "Modelo de dominio separado de la persistencia.",
             "Capa DAO o repositorio para aislar acceso a datos.",
             "Base preparada para a&ntilde;adir interfaz o API."
         ],
         githubUrl: "",
-        artifact: {
-            label: "Descargar EXE",
-            url: "",
-        },
-        preview: "backend"
+        artifact: { label: "Descargar EXE", url: "" },
+        preview: "backend",
+        en: {
+            subtitle: "Layered architecture and backend design",
+            status: "Finished",
+            summary: "Application designed to practice services, DAO, database and separation between business, presentation and integration alongside MVC.",
+            description: "Project reserved for a more complete application with layered architecture, SQL queries and a maintainable structure. Designed as a natural evolution from console exercises towards an application with more real components.",
+            highlights: [
+                "Domain model separated from persistence.",
+                "DAO or repository layer to isolate data access.",
+                "Base ready to add interface or API."
+            ],
+            artifact: { label: "Download EXE", url: "" }
+        }
     },
     {
         slug: "estructuras-de-datos",
@@ -104,17 +123,29 @@ export const projects = [
         ],
         githubUrl: "",
         artifact: null,
-        preview: "backend"
+        preview: "backend",
+        en: {
+            title: "Data Structure Exercises",
+            subtitle: "Exercises and algorithms in Java/C++",
+            status: "Exercises",
+            summary: "Collection of exercises to reinforce lists, stacks, queues, trees, maps and complexity analysis.",
+            description: "Set of small exercises focused on understanding how data structures behave and when it's best to use each one. Serves as a technical foundation for larger projects.",
+            highlights: [
+                "Implementations and practical use of common structures.",
+                "Problem solving with different approaches.",
+                "Code prepared to compare readability and efficiency."
+            ]
+        }
     },
     {
         slug: "ecosistema",
         title: "Ecosistema",
-        subtitle: "Arquitectura por capas y diseño backend",
+        subtitle: "Arquitectura por capas y dise&ntilde;o backend",
         featured: true,
         status: "Terminado",
         accent: "violet",
         tags: ["Java", "MVC", "POO"],
-        summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC. ",
+        summary: "Aplicaci&oacute;n pensada para practicar servicios, DAO, base de datos y separaci&oacute;n entre negocio, presentaci&oacute;n e integraci&oacute;n junto al MVC.",
         description: "Proyecto reservado para una aplicaci&oacute;n m&aacute;s completa, con arquitectura por capas, consultas SQL y una estructura mantenible. Est&aacute; pensado como evoluci&oacute;n natural desde ejercicios de consola hacia una aplicaci&oacute;n con m&aacute;s piezas reales.",
         highlights: [
             "Modelo de dominio separado de la persistencia.",
@@ -122,11 +153,20 @@ export const projects = [
             "Base preparada para a&ntilde;adir interfaz o API."
         ],
         githubUrl: "",
-        artifact: {
-            label: "Descargar EXE",
-            url: "",
-        },
-        preview: "backend"
+        artifact: { label: "Descargar EXE", url: "" },
+        preview: "backend",
+        en: {
+            subtitle: "Layered architecture and backend design",
+            status: "Finished",
+            summary: "Application designed to practice services, DAO, database and separation between business, presentation and integration alongside MVC.",
+            description: "Project reserved for a more complete application with layered architecture, SQL queries and a maintainable structure. Designed as a natural evolution from console exercises towards an application with more real components.",
+            highlights: [
+                "Domain model separated from persistence.",
+                "DAO or repository layer to isolate data access.",
+                "Base ready to add interface or API."
+            ],
+            artifact: { label: "Download EXE", url: "" }
+        }
     },
     {
         slug: "portfolio",
@@ -145,7 +185,19 @@ export const projects = [
         ],
         githubUrl: "https://github.com/Pabldi08/portfolio-pdiazruiperez",
         artifact: null,
-        preview: "web"
+        preview: "web",
+        en: {
+            title: "Personal Portfolio",
+            subtitle: "Static website to showcase projects",
+            status: "Evolving",
+            summary: "Responsive portfolio with view navigation, featured projects, full listing and detail pages.",
+            description: "This website works as a presentation card and as a space to document the evolution of projects. It's made simply so it's easy to maintain, edit and publish without relying on heavy frameworks.",
+            highlights: [
+                "Main view with featured projects.",
+                "Full project listing with interactive cards.",
+                "Individual detail with links to repository and executables when available."
+            ]
+        }
     }
 ];
 

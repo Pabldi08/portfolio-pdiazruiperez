@@ -9,7 +9,16 @@
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/favicon.png" />
     <meta name="theme-color" content="#050506" />
-    <link rel="stylesheet" href="/css/styles.css?v=cf5e129c45">
+    <meta property="og:title" content="Pablo Díaz · Portfolio" />
+    <meta property="og:description" content="Desarrollador de software especializado en Java, C++ y backend. Proyectos documentados con arquitectura limpia." />
+    <meta property="og:image" content="https://pdruiperez.com/assets/og-image.png" />
+    <meta property="og:url" content="https://pdruiperez.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pablo Díaz · Portfolio" />
+    <meta name="twitter:description" content="Desarrollador de software especializado en Java, C++ y backend." />
+    <meta name="twitter:image" content="https://pdruiperez.com/assets/og-image.png" />
+    <link rel="stylesheet" href="/css/styles.css?v=771f78e24b">
 </head>
 
 <body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-sky-400 selection:text-zinc-950">
@@ -23,13 +32,19 @@
             </a>
 
             <div class="hidden items-center gap-8 text-sm font-medium text-zinc-300 md:flex">
-                <a href="/proyectos" class="transition hover:text-sky-400">Proyectos</a>
+                <a href="/proyectos" class="transition hover:text-sky-400" data-i18n="nav_projects">Proyectos</a>
                 <a href="/stack" class="transition hover:text-sky-400">Stack</a>
                 <a href="/cv" class="transition hover:text-sky-400">CV</a>
                 <a href="/contacto"
-                    class="rounded-full bg-sky-400 px-5 py-2 font-bold text-zinc-950 transition hover:bg-sky-300">
+                    class="rounded-full bg-sky-400 px-5 py-2 font-bold text-zinc-950 transition hover:bg-sky-300"
+                    data-i18n="nav_contact">
                     Contacto
                 </a>
+                <button type="button" data-lang-toggle
+                    class="rounded-full border border-white/15 px-3 py-1 text-xs font-black text-zinc-400 transition hover:border-white/30 hover:text-white"
+                    aria-label="Switch language">
+                    <span data-i18n="nav_lang_toggle">EN</span>
+                </button>
             </div>
 
             <button id="mobile-menu-btn"
@@ -47,22 +62,29 @@
 
     <div id="mobile-menu" hidden class="border-b border-white/10 bg-zinc-950/95 backdrop-blur-xl md:hidden">
         <nav class="mx-auto max-w-6xl space-y-1 px-6 py-4">
-            <a href="/proyectos" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition hover:text-sky-400">Proyectos</a>
+            <a href="/proyectos" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition hover:text-sky-400" data-i18n="nav_projects">Proyectos</a>
             <a href="/stack" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition hover:text-sky-400">Stack</a>
             <a href="/cv" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition hover:text-sky-400">CV</a>
             <div class="pt-2">
-                <a href="/contacto" class="block rounded-full bg-sky-400 px-5 py-2.5 text-center text-sm font-bold text-zinc-950 transition hover:bg-sky-300">Contacto</a>
+                <a href="/contacto" class="block rounded-full bg-sky-400 px-5 py-2.5 text-center text-sm font-bold text-zinc-950 transition hover:bg-sky-300" data-i18n="nav_contact">Contacto</a>
+            </div>
+            <div class="border-t border-white/10 pt-3">
+                <button type="button" data-lang-toggle
+                    class="rounded-full border border-white/15 px-3 py-1 text-xs font-black text-zinc-400 transition hover:border-white/30 hover:text-white"
+                    aria-label="Switch language">
+                    <span data-i18n="nav_lang_toggle">EN</span>
+                </button>
             </div>
         </nav>
     </div>
 
     <main id="app"></main>
 
-    <footer class="border-t border-white/10 py-8 text-center text-sm text-zinc-500" data-site-shell>
-        &copy; 2026 pdruiperez.com &middot; Hecho con HTML, Tailwind CSS y JavaScript
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-zinc-400" data-site-shell>
+        <span data-i18n="footer_copy">&copy; 2026 pdruiperez.com &middot; Hecho con HTML, Tailwind CSS y JavaScript</span>
     </footer>
 
-    <script type="module" src="/js/main.js?v=cf5e129c45"></script>
+    <script type="module" src="/js/main.js?v=771f78e24b"></script>
 </body>
 
 </html>
